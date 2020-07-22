@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'PageController@index');
+Route::get('/narchive','PageController@newsarchive')->name(
+    'newsarchive'
+);
+Route::get('/parchive','PageController@parchive');
+Route::get('/news/{id}','PageController@singlenews')->name('news');
+Route::get('/pre/{id}','PageController@singlepref');
+Route::get('/spo/{id}','PageController@singlesport');
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });

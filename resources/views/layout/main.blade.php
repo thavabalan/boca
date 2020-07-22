@@ -11,18 +11,18 @@
 	
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/all.min.css" />
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/css/animate.css" />
-<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-<link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
-<link rel="stylesheet" href="assets/css/boca-deportes.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<link rel="stylesheet" href="assets/css/lity.css" />
+<link rel="stylesheet" href="{{asset('/assets/css/all.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/animate.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/owl.carousel.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/owl.theme.default.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/boca-deportes.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/style.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/lity.css')}}" />
 
 <!-- Menu -->
-<link rel="stylesheet" type="text/css" href="assets/css/mega_menu.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/mega_menu.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}" />
 <!-- Menu -->
 
 </head>
@@ -38,17 +38,16 @@
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <ul class="menu-logo">
-              <li> <a href="index.html"><img id="logo_img" src="images/logo.png" alt="logo"> </a> </li>
+              <li> <a href="/"><img id="logo_img" src="{{asset('images/logo.png')}}" alt="logo"> </a> </li>
             </ul>
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
-                <li class="menu-item-parent"> <a href="">Home</a> </li>
-                <li class="menu-item-parent"> <a href="">Deportes</a> </li>
-                <li class="menu-item-parent"> <a href="">Noticias</a> </li>
+                <li class="menu-item-parent"> <a href="/">Home</a> </li>
+                <li class="menu-item-parent"> <a href="#">Deportes</a> </li>
+                <li class="menu-item-parent"> <a href="narchive">Noticias</a> </li>
                 <li class="menu-item-parent"> <a href="">Videos</a> </li>
                 <li class="menu-item-parent"> <a href="">Redes</a> </li>
-                <li class="menu-item-parent"> <a href="">#Perfilesxeneixe</a> </li>
-                <li class="menu-item-parent"> <a href="">Momentos</a> </li>
+                <li class="menu-item-parent"> <a href="parchive">#Perfilesxeneixe</a> </li>
                 <li class="menu-item-parent redes"> <a class="twitter" target="_blank" href=""><i class="fab fa-twitter"></i></a> </li>
               </ul>
             </div>
@@ -69,9 +68,9 @@
     <div class="row">
       <div class="col-md-1 logo-footer"> <img src="images/logo.png"> </div>
       <div class="col-md-7 text-center ">
-        <p><img src="images/star.png">&nbsp;www.deportesboca.com.ar </p>
+        <p><img src="{{asset('images/star.png')}}">&nbsp;www.deportesboca.com.ar </p>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <p><img src="images/star.png">&nbsp;Brandsen 805, Capital Federal</p>
+        <p><img src="{{asset('images/star.png')}}">&nbsp;Brandsen 805, Capital Federal</p>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <p>Vení a hacer deportes en Boca.</p>
       </div>
@@ -111,16 +110,16 @@
 	
 	
 	
-<script src="assets/js/jquery-3.5.0.min.js"></script> 
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/wow.min.js"></script> 
-<script src="assets/js/fontawesome.min.js"></script> 
-<script src="assets/js/owl.carousel.min.js"></script> 
-<script src="assets/js/boca-deportes.js"></script> 
-<script src="assets/js/lity.js"></script> 
+<script src="{{asset('assets/js/jquery-3.5.0.min.js')}}"></script> 
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script> 
+<script src="{{asset('assets/js/wow.min.js')}}"></script> 
+<script src="{{asset('assets/js/fontawesome.min.js')}}"></script> 
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script> 
+<script src="{{asset('assets/js/boca-deportes.js')}}"></script> 
+<script src="{{asset('assets/js/lity.js')}}"></script> 
 
 <!-- menu --> 
-<script> var plugin_path = 'assets/js/'; </script> 
+<script> var plugin_path = '{{asset('assets/js/')}}'; </script> 
 <!-- menu --> 
 
 </body>
