@@ -43,10 +43,10 @@
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
                 <li class="menu-item-parent"> <a href="/">Home</a> </li>
-                <li class="menu-item-parent"> <a href="#">Deportes</a> </li>
+                <li class="menu-item-parent"> <a href="#">#Deportes</a> </li>
                 <li class="menu-item-parent"> <a href="narchive">Noticias</a> </li>
-                <li class="menu-item-parent"> <a href="">Videos</a> </li>
-                <li class="menu-item-parent"> <a href="">Redes</a> </li>
+                <li class="menu-item-parent"> <a href="">#Videos</a> </li>
+                <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
                 <li class="menu-item-parent"> <a href="parchive">#Perfilesxeneixe</a> </li>
                 <li class="menu-item-parent redes"> <a class="twitter" target="_blank" href=""><i class="fab fa-twitter"></i></a> </li>
               </ul>

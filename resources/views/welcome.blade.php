@@ -89,7 +89,7 @@
     <section class="features videos">
       <div class="col-md-12">
         <div class="mt-2 mb-3">
-          <h2>Videos</h2>
+          <h2>#Videos</h2>
         </div>
       </div>
       <div class="owl-carousel owl-theme" id="videos" >
