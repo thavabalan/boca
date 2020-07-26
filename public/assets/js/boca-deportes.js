@@ -349,7 +349,7 @@ $(document).ready(function () {
 	       Mega menu
 	*************************/
 	POTENZA.megaMenu = function () {
-		loadScript(plugin_path + 'mega_menu.js', function () {
+		loadScript(plugin_path + '/mega_menu.js', function () {
 			var nav = $('#menu');
 			var l = nav.attr('data-pos');
 			var pos = 'horizontal';
