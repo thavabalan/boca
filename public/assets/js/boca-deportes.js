@@ -382,10 +382,10 @@ $(document).ready(function () {
 				}
 			});
 			// Dynamic active menu
-			var path = window.location.pathname.split("/").pop();
-			var target = $('header .mega-menu a[href="' + path + '"]');
-			target.parent().addClass('active');
-			$('header .mega-menu li.active').parents('li').addClass('active');
+			//var path = window.location.pathname.split("").pop();
+			//var target = $('header .mega-menu a[href="' + path + '"]');
+			//target.parent().addClass('active');
+			//$('header .mega-menu li.active').parents('li').addClass('active');
 
 		});
 	};
@@ -464,17 +464,17 @@ $(document).ready(function () {
 			var StrCount = current.split('index.html').length - 1;
 
 			 //if the current path is like this link, make it active
-			if ($this.attr('href').toLowerCase().indexOf(current) !== -1 && StrCount >= 2) {
-				$this.addClass('active');
-				$this.closest('.menu-item-parent').addClass('active');
-				$this.closest('.menu-item-child').addClass('active');
-			} 
-			else {
+			//if ($this.attr('href').toLowerCase().indexOf(current) !== -1 && StrCount >= 2) {
+			//	$this.addClass('active');
+			//	$this.closest('.menu-item-parent').addClass('active');
+			//	$this.closest('.menu-item-child').addClass('active');
+			//} 
+			//else {
 
-				if ($this.attr('href').toLowerCase().indexOf(current) !== -1 && StrCount <= 1) {                           
-					$this.closest('.menu-item-parent').addClass('active');
-				}
-			}
+			//	if ($this.attr('href').toLowerCase().indexOf(current) !== -1 && StrCount <= 1) {                           
+			//		$this.closest('.menu-item-parent').addClass('active');
+			//	}
+		//	}
 
 		});
 	 }
