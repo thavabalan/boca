@@ -151,7 +151,7 @@
             <div class="row">
                 @foreach($news as $item)
 
-              <div class="col-md-4"> <a href="http://localhost/boca/">
+              <div class="col-md-4"> <a href="{{url('/noticias')}}/{{$item->slug}}">
                 <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt="">
                   <div class="card-body">
                     <h5>{{$item->title}}</h5>
@@ -162,7 +162,7 @@
                 @endforeach
             </div>
           </div>
-          <div class="col-md-12 text-center mt-4"> <a href="/narchive" class="btn-outline-boca">Más perfiles</a> </div>
+          <div class="col-md-12 text-center mt-4"> <a href="{{url('/noticias')}}" class="btn-outline-boca">Más perfiles</a> </div>
         </div>
       </div>
     </section>

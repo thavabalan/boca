@@ -38,7 +38,7 @@
                 <div class="bg-white card aaSadow border-0"> <a href="{{route('news' , $item->id)}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt=""> </a>
                   <div class="card-body">
                     <h6 class=""> {{$item->lead}}  </h6>
-                    <h5 class="card-title"><a href="{{route('news' , $item->slug)}}">{{$item->title}}</a></h5>
+                  <h5 class="card-title"><a href="{{url('/noticias')}}/{{$item->slug}}">{{$item->title}}</a></h5>
                     <p class="card-text">{{$item->excerpt}}</p>
                     <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="http://localhost/boca/">Ver más..</a> </div>
                 </div>
