@@ -100,7 +100,7 @@
         <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$video->image}}" alt="">
           <div class="card-body text-center"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>
             <h1>{{$video->title}}</h1>
-            <h3>{{$video->subtitle}}</h3>
+            <h3>{{$video->sub_title}}</h3>
           </div>
         </div>
         </a> 
