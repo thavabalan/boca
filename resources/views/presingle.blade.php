@@ -37,7 +37,7 @@
       <div class="col-md-12 noticias">
         <div class="container mb-5">
           <div class="mt-3 mb-4">
-            <h2>#PerfilesXeneizes
+            <h2> Noticias
             </h2>
           </div>
           <div class="row flex">
@@ -46,7 +46,7 @@
               <div class="news-item">
               <div class="bg-white card aaSadow border-0"> <a href="news/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
                   <div class="card-body">
-                    <h6 class=""> Amateur </h6>
+                    <h6 class="">  </h6>
                     <h5 class="card-title"><a href="{{route('news' , $item->id)}}">{{$item->title}}</a></h5>
                     <p class="card-text">{{$item->excerpt}}</p>
                     <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="{{route('news' , $item->id)}}">Ver más..</a> </div>

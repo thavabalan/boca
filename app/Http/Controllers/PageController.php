@@ -7,6 +7,8 @@ use App\News;
 use App\Video;
 use App\Perfilesxeneize;
 use App\Sport;
+use App\Momento;
+
 class PageController extends Controller
 {
     public function index(){
@@ -14,7 +16,8 @@ class PageController extends Controller
         $videos = Video::all();
         $perfilesxeneizes = Perfilesxeneize::all();
         $sports = Sport::all();
-        return view('welcome')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withSports($sports);
+        $momentos = Momento::all();
+        return view('welcome')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withSports($sports)->withMomentos($momentos);
     }
 
     public function newsarchive(){
@@ -30,8 +33,10 @@ class PageController extends Controller
         return view('archivep')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes);
     }
 
-    public function singlenews($id){
-        $news = News::find($id);
+    public function singlenews($slug){
+        $news = News::where('slug', $slug)
+
+        ->first();
         $newses = News::paginate(20);
 
         return view('newssingle')->withNews($news)->withNewses($newses);

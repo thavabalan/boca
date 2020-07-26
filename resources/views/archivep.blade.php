@@ -29,16 +29,16 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="mt-3 mb-4">
-              <h2>#PerfilesXeneizes</h2>
+              <h2 class="noticias1">#PerfilesXeneizes</h2>
             </div>
           </div>
           <div class="row">
               @foreach($perfilesxeneizes as $item)
             <div class="col-md-3"><div class=" news-item ">
-                <div class="bg-white card aaSadow border-0"> <a href="http://localhost/boca/"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
+                <div class="bg-white card aaSadow border-0"> <a href="perfiles/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
                   <div class="card-body">
-                    <h6 class="">Amateur </h6>
-                    <h5 class="card-title"><a href="http://localhost/boca/">{{$item->title}}</a></h5>
+                    <h6 class=""> </h6>
+                    <h5 class="card-title"><a href="perfiles/{{$item->id}}">{{$item->title}}</a></h5>
                     <p class="card-text">{{$item->excerpt}}</p>
                     <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="http://localhost/boca/">Ver más..</a> </div>
                 </div>

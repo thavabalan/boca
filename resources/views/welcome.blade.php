@@ -12,8 +12,9 @@
       
     <section class="intro-video">
       <div class="videoContainer">
-        <div style="position:relative; overflow:hidden; padding-bottom:56.25%"> <iframe src="https://cdn.jwplayer.com/players/sVzKg4Ti-NuXnKl8b.html" width="100%" height="100%" frameborder="0" scrolling="auto" title="1894317570" style="position:absolute;" allowfullscreen></iframe> </div>
-
+        <video autoplay loop muted playsinline id="homevideo">
+          <source src="https://player.vimeo.com/external/434831437.hd.mp4?s=47b7664a78afc6166c8e976b72fc5252522412b5&profile_id=175" type="video/mp4">
+        </video>
         <div class="video-overlay"></div>
       </div>
       <div class="mute_unmute animated fadeIn" style="">
@@ -70,8 +71,8 @@
               <div class=" news-item ">
               <div class="bg-white card aaSadow border-0"> <a href="news/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt=""> </a>
                   <div class="card-body">
-                    <h6 class=""> Amateur </h6>
-                    <h5 class="card-title"><a href="news/{{$item->id}}">{{$item->title}}</a></h5>
+                    <h6 class="">  {{$item->lead}} </h6>
+                  <h5 class="card-title"><a href="noticias/{{$item->slug}}">{{$item->title}}</a></h5>
                     <p class="card-text">{{$item->excerpt}}</p>
                     <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="news/{{$item->id}}">Ver más..</a> </div>
                 </div>
@@ -79,14 +80,15 @@
               @endforeach
             </div>
           </div>
-          <div class="col-md-12 text-center"> <a href="narchive" class="btn-outline-boca">Más noticias</a> </div>
+          <div class="col-md-12 text-center"> <a href="{{route('newsarchive')}}" class="btn-outline-boca">Más noticias</a> </div>
         </div>
       </div>
     </section>
       
       
       
-    <section class="features videos">
+    <section class="features videos" >
+      <div >
       <div class="col-md-12">
         <div class="mt-2 mb-3">
           <h2>#Videos</h2>
@@ -98,18 +100,20 @@
         <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$video->image}}" alt="">
           <div class="card-body text-center"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>
             <h1>{{$video->title}}</h1>
-            <h3>Superclásico</h3>
+            <h3>{{$video->subtitle}}</h3>
           </div>
         </div>
         </a> 
         @endforeach
        </div>
       <div class="col-md-12 videos-bottom"> <a href="" class="btn-outline-boca-amarillo">Ir a la playlist</a> </div>
+      </div>
     </section>
       
       
       
-    <section class="news px-3 rss">
+    <section class="news px-3 rss" >
+      <div id="deportes">
       <div class="container-fluid ">
         <div class="row">
           <div class="col-lg-12">
@@ -143,7 +147,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div></div>
     </section>
       
       
@@ -159,7 +163,7 @@
           <div class="col-md-12 col-lg-12" >
             <div class="row">
               @foreach($perfilesxeneizes as $item)
-              <div class="col-md-4"> <a href="pre/{{$item->id}}">
+              <div class="col-md-4"> <a href="noticias/{{$item->id}}">
                 <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
                   <div class="card-body">
                     <h5>{{$item->title}}</h5>
@@ -170,12 +174,27 @@
                 @endforeach
             </div>
           </div>
-          <div class="col-md-12 text-center mt-4"> <a href="/parchive" class="btn-outline-boca">Más perfiles</a> </div>
+          <div class="col-md-12 text-center mt-4"> <a href="/perfiles" class="btn-outline-boca">Más perfiles</a> </div>
         </div>
       </div>
     </section>
       
-      
+    <section class="features momentos">
+      <div class="col-md-12">
+        <div class="mt-3 mb-4">
+          <h2>Momentos</h2>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme" id="momentos" >
+        @foreach($momentos as $momento)
+        <div class="card"> <img class="card-img-top" src="{{Voyager::image($momento->image)}}" alt="">
+          <div class="card-body">
+            <h3></h3>
+          </div>
+        </div>
+       @endforeach
+      </div>
+    </section>
       
   
       
