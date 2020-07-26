@@ -43,7 +43,7 @@
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
                 <li class="menu-item-parent"> <a href="/">Home</a> </li>
-                <li class="menu-item-parent"> <a href="#deportes">#Deportes</a> </li>
+                <li class="menu-item-parent"> <a href="#deportes">Deportes</a> </li>
                 <li class="menu-item-parent"> <a href="{{route('newsarchive')}}">Noticias</a> </li>
                 <li class="menu-item-parent"> <a href="#videos">Videos</a> </li>
                 <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
