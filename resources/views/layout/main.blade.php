@@ -43,11 +43,12 @@
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
                 <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/">Home</a> </li>
-                <li class="menu-item-parent"> <a href="#deportes">Deportes</a> </li>
+                <li class="menu-item-parent"> <a href="#deportes1">Deportes</a> </li>
                 <li class="menu-item-parent {{ Request::is('/noticias') ? 'active' : '' }}"> <a href="{{ url('/noticias' )}}">Noticias</a> </li>
-                <li class="menu-item-parent"> <a href="#videos">Videos</a> </li>
+              <li class="menu-item-parent"> <a href="{{url('/')}}#videos1">Videos</a> </li>
                 <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
                 <li class="menu-item-parent {{ Request::is('/perfiles') ? 'active' : '' }}"> <a href="{{route('perfiles')}}">#Perfilesxeneixe</a> </li>
+                <li class="menu-item-parent {{ Request::is('/perfiles') ? 'active' : '' }}"> <a href="{{url('/')}}#momentos1">Momentos</a> </li>
                 <li class="menu-item-parent redes"> <a class="twitter" target="_blank" href=""><i class="fab fa-twitter"></i></a> </li>
               </ul>
             </div>
@@ -66,7 +67,7 @@
 <footer class="footer-text">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-1 logo-footer"> <img src="images/logo.png"> </div>
+      <div class="col-md-1 logo-footer"> <img src="{{asset('images/logo.png')}}"> </div>
       <div class="col-md-7 text-center ">
         <p><img src="{{asset('images/star.png')}}">&nbsp;www.deportesboca.com.ar </p>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -95,7 +96,8 @@
 <div id="sumate" class="lity-hide sumate-form">
   <h2 class="">Sumate!</h2>
   <p>Completá tus datos</p>
-  <form action="" method="post">
+  <form action="{{ route('contact.store') }}" method="post">
+    @csrf
     <input name="nombre" placeholder="Nombre" type="text" tabindex="1" required >
     <input name="telefono" placeholder="Teléfono" type="text" tabindex="1" required >
     <input name="email" placeholder="Email" type="email" tabindex="2" required>

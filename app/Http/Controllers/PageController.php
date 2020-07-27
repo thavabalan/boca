@@ -48,9 +48,9 @@ class PageController extends Controller
         return view('presingle')->withNews($news)->withNewses($newses);
     }
     public function singlesport($id){
-        $news = Sport::find($id);
-        $newses = Sport::paginate(20);
-
-        return view('sposingle')->withNews($news)->withNewses($newses);
+        $sport = Sport::find($id);
+        $newses = News::paginate(20);
+        $videos = Video::paginate(20);
+        return view('sposingle')->withSport($sport)->withNewses($newses)->withVideos($videos);
     }
 }

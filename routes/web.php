@@ -24,3 +24,9 @@ Route::get('/spo/{id}','PageController@singlesport');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
+Route::post('/contact', [
+    'uses' => 'ContactUsFormController@ContactUsForm',
+    'as' => 'contact.store'
+]);

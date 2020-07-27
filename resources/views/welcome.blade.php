@@ -36,13 +36,17 @@
       <a href="" class="btn-outline-boca">Conocé más</a>
     </section>
       
+    @if(Session::has('success'))
+    <div class="alert alert-success">
+        {{Session::get('success')}}
+    </div>
+@endif
       
-      
-    <section class="features deportes">
+    <section class="features deportes" id="deportes1">
       <div class="owl-carousel owl-theme " id="deportes" > 
         @foreach($sports as $sport)
         <a href="/spo/{{$sport->id}}">
-        <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$sport->image}}" alt="">
+        <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$sport->featured_image}}" alt="">
           <div class="card-body">
             <h1>{{$sport->title}}</h1>
            <!-- <h3>días y horarios</h3> -->
@@ -73,7 +77,7 @@
                   <div class="card-body">
                     <h6 class="">  {{$item->lead}} </h6>
                   <h5 class="card-title"><a href="noticias/{{$item->slug}}">{{$item->title}}</a></h5>
-                    <p class="card-text">{{$item->excerpt}}</p>
+                    <p class="card-text">{!! Str::limit($item->body, 10) !!}</p>
                     <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="news/{{$item->id}}">Ver más..</a> </div>
                 </div>
               </div>
@@ -87,7 +91,7 @@
       
       
       
-    <section class="features videos" >
+    <section class="features videos" id="videos1">
       <div >
       <div class="col-md-12">
         <div class="mt-2 mb-3">
@@ -96,7 +100,7 @@
       </div>
       <div class="owl-carousel owl-theme" id="videos" >
         @foreach($videos as $video)
-        <a data-lity href="https://www.youtube.com/embed/{{$video->video_id}}">
+        <a data-lity href="#inline{{$video->id}}">
         <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$video->image}}" alt="">
           <div class="card-body text-center"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>
             <h1>{{$video->title}}</h1>
@@ -104,12 +108,18 @@
           </div>
         </div>
         </a> 
+       
         @endforeach
        </div>
       <div class="col-md-12 videos-bottom"> <a href="" class="btn-outline-boca-amarillo">Ir a la playlist</a> </div>
       </div>
     </section>
-      
+    @foreach($videos as $video)
+
+  <div id="inline{{$video->id}}"  style="overflow:auto;background:#FDFDF6;padding:20px;width:600px;max-width:100%;border-radius:6px" class="lity-hide">
+      {!!$video->embed_code!!}
+  </div>
+  @endforeach
       
       
     <section class="news px-3 rss" >
@@ -163,7 +173,7 @@
           <div class="col-md-12 col-lg-12" >
             <div class="row">
               @foreach($perfilesxeneizes as $item)
-              <div class="col-md-4"> <a href="noticias/{{$item->id}}">
+              <div class="col-md-4"> <a href="perfiles/{{$item->id}}">
                 <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
                   <div class="card-body">
                     <h5>{{$item->title}}</h5>
@@ -179,7 +189,7 @@
       </div>
     </section>
       
-    <section class="features momentos">
+    <section class="features momentos" id="momentos1">
       <div class="col-md-12">
         <div class="mt-3 mb-4">
           <h2>Momentos</h2>
