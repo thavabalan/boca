@@ -13,7 +13,7 @@
     <section class="intro-video">
       <div class="videoContainer">
         <video autoplay loop muted playsinline id="homevideo">
-          <source src="https://player.vimeo.com/external/434831437.hd.mp4?s=47b7664a78afc6166c8e976b72fc5252522412b5&profile_id=175" type="video/mp4">
+          <source src="https://content.jwplatform.com/videos/sVzKg4Ti-AuTjtEnY.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
       </div>
