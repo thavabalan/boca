@@ -25,6 +25,36 @@
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}" />
 <!-- Menu -->
 
+<style>
+#playCTA{
+            position: absolute;
+            z-index: 2;
+            color: white;
+            font-size: 50px;
+            font-family: 'Bebas Neue', cursive;
+            right: 2em;
+            top: 50%;
+            cursor: pointer;
+width:100%;
+text-align:right;
+        }
+#playCTA i{
+margin-left:5px;
+}
+        #videoCover{
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            position: absolute;
+        }
+
+@media screen and (max-width:600px){
+	#playCTA{
+	right:1em;
+}
+}
+</style>
 </head>
 
 <body>
@@ -144,6 +174,9 @@ $(document).ready(function () {
 			params[p[0]] = p[1];
 		}
 	}
+$(".fa-volume-up").show();
+                $(".fa-volume-off").hide();
+/*
 	if (ps == ",p") {
 		$("#homevideo").prop('muted', false);
 		$(".fa-volume-up").show();
@@ -155,7 +188,7 @@ $(document).ready(function () {
 		$(".fa-volume-off").show();
 	}
 
-
+*/
 
 
 
@@ -175,6 +208,11 @@ $(document).ready(function () {
 			$(".fa-volume-off").show();
 		}
 	});
+	$("#playCTA").click(function () {
+            $("#homevideo")[0].play();
+		$(this).hide();
+		$('#videoCover').hide(); 
+        });
  
 });
 	

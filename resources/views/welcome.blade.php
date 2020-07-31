@@ -11,8 +11,10 @@
       
       
     <section class="intro-video">
+	<div id="playCTA">Un club atletico <i class="fa fa-play"></i></div>
       <div class="videoContainer">
-        <video autoplay loop muted playsinline id="homevideo">
+        <img id="videoCover" src="http://deportesboca.lineadgroup.com/storage/play.jpg"/>
+	<video loop playsinline id="homevideo">
           <source src="https://content.jwplatform.com/videos/sVzKg4Ti-AuTjtEnY.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
