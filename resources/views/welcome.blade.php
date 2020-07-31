@@ -131,29 +131,28 @@
               <h2>@deportesboca</h2>
             </div>
           </div>
+
           <div class="col-md-12">
             <div class="owl-carousel owl-theme " id="rss">
+             
+            @if(!empty($data))
+                @foreach($twittes as $key => $value)
+
+             
               <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
+                <div class="bg-white card aaSadow border-0"> 
+                @if(!empty($value['extended_entities']['media']))
+                                @foreach($value['extended_entities']['media'] as $v)
+                                    <img class="card-img-top" src="{{ $v['media_url_https'] }}" style="width:100px;">
+                                @endforeach
+                            @endif
+                </div>
+                </a> 
+                </div>
+              
+                @endforeach
+            @else
+
             </div>
           </div>
         </div>

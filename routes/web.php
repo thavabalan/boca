@@ -18,7 +18,7 @@ Route::get('/noticias','PageController@newsarchive')->name(
     'newsarchive'
 );
 Route::get('/perfiles','PageController@parchive')->name('perfiles');
-Route::get('/noticias/{slug}','PageController@singlenews')->name('news');
+Route::get('/noticias/{slug-{id}}','PageController@singlenews')->name('news');
 Route::get('/perfiles/{id}','PageController@singlepref');
 Route::get('/spo/{id}','PageController@singlesport');
 Route::group(['prefix' => 'admin'], function () {

@@ -8,6 +8,9 @@ use App\Video;
 use App\Perfilesxeneize;
 use App\Sport;
 use App\Momento;
+use Twitter;
+use File;
+
 
 class PageController extends Controller
 {
@@ -17,7 +20,9 @@ class PageController extends Controller
         $perfilesxeneizes = Perfilesxeneize::all();
         $sports = Sport::all();
         $momentos = Momento::all();
-        return view('welcome')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withSports($sports)->withMomentos($momentos);
+        $twittes = Twitter::getUserTimeline(['count' => 10, 'format' => 'array']);
+
+        return view('welcome')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withSports($sports)->withMomentos($momentos)->withTwittes($twittes);
     }
 
     public function newsarchive(){
