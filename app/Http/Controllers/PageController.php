@@ -21,7 +21,6 @@ class PageController extends Controller
         $sports = Sport::all();
         $momentos = Momento::all();
         $twittes = Twitter::getUserTimeline(['count' => 10, 'format' => 'array']);
-
         return view('welcome')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withSports($sports)->withMomentos($momentos)->withTwittes($twittes);
     }
 

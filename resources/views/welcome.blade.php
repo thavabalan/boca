@@ -1,7 +1,13 @@
 @extends('layout.main')
 @section('content')
+
+<style>
+.twt{
+  background-color:red;
+  min-height:300px;
+}
+  </style>
 <main role="main">
-	
 	
 	
     <div class="container-fluid">
@@ -132,29 +138,33 @@
             </div>
           </div>
 
-          <div class="col-md-12">
-            <div class="owl-carousel owl-theme " id="rss">
-             
-            @if(!empty($data))
-                @foreach($twittes as $key => $value)
 
-             
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> 
+          <div class="col-md-12">
+          <div class="owl-carousel owl-theme owl-loaded owl-drag " id="rss">
+          @if(!empty($twittes))
+                @foreach($twittes as $key => $value) 
+                <div class="bg-white card aaSadow border-0 p-3 twt">
+                <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr"><strong>{{ $value['text'] }}</strong> 
+               </blockquote> 
+
                 @if(!empty($value['extended_entities']['media']))
                                 @foreach($value['extended_entities']['media'] as $v)
-                                    <img class="card-img-top" src="{{ $v['media_url_https'] }}" style="width:100px;">
+                                    <img src="{{ $v['media_url_https'] }}" style="width:100px;">
                                 @endforeach
                             @endif
-                </div>
-                </a> 
-                </div>
-              
-                @endforeach
-            @else
 
+</div>
+          @endforeach
+            @else
+                
+                    <p colspan="6">There are no data.</p>
+              
+            @endif
             </div>
-          </div>
+            
+</div>
+
         </div>
       </div></div>
     </section>
