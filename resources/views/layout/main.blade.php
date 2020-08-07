@@ -91,7 +91,7 @@ left:0;
 <body>
 	
 	
-	{{var_dump(URL)}}
+	{{var_dump(Request)}}
 <div id="top-navbar" class="menu">
   <nav id="menu" class="mega-menu {{ Request::is('/') ? 'intro' : '' }}">
     <section class="menu-list-items">
