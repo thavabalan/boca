@@ -43,12 +43,12 @@
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
                 <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/">Home</a> </li>
-                <li class="menu-item-parent"> <a href="#deportes1">Deportes</a> </li>
+                <li class="menu-item-parent"> <a href="/#deportes1">Deportes</a> </li>
                 <li class="menu-item-parent {{ Request::is('/noticias') ? 'active' : '' }}"> <a href="{{ url('/noticias' )}}">Noticias</a> </li>
-              <li class="menu-item-parent"> <a href="{{url('/')}}#videos1">Videos</a> </li>
+              <li class="menu-item-parent"> <a href="/#videos1">Videos</a> </li>
                 <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
                 <li class="menu-item-parent {{ Request::is('/perfiles') ? 'active' : '' }}"> <a href="{{route('perfiles')}}">#Perfilesxeneixe</a> </li>
-                <li class="menu-item-parent {{ Request::is('/perfiles') ? 'active' : '' }}"> <a href="{{url('/')}}#momentos1">Momentos</a> </li>
+                <li class="menu-item-parent"> <a href="/#momentos1">Momentos</a> </li>
                 <li class="menu-item-parent redes"> <a class="twitter" target="_blank" href=""><i class="fab fa-twitter"></i></a> </li>
               </ul>
             </div>
