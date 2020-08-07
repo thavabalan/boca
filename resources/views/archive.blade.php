@@ -89,30 +89,19 @@
             </div>
           </div>
           <div class="col-md-12">
-            <div class="owl-carousel owl-theme owl-loaded owl-drag" id="rss">
-              
-              
-              
-              
-              
-              
-              
-            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2165px, 0px, 0px); transition: all 0.25s ease 0s; width: 5260px;">
-              
-              <div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> 
-                 @if(!empty($twittes))
+          <div class="owl-carousel owl-theme owl-loaded owl-drag " id="rss">
+            @if(!empty($twittes))
                 @foreach($twittes as $key => $value) 
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/{{$value['id']}}?ref_src=twsrc%5Etfw">May 5, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 
-          @endforeach
+            @endforeach
             @else
                 
-                    <p colspan="6">There are no data.</p>
+                    <p colspan="6">No hay tweets.</p>
               
             @endif
-              </div></div>
+            </div>
               
-              </div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
+              
           </div>
         </div>
       </div>

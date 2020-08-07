@@ -84,7 +84,7 @@
           </div>
           <div class="col-md-12">
             <div class="owl-carousel owl-theme " id="noticias">
-              @foreach ($news as $item)
+              @foreach ($news->slice(0, 10) as $item)
                   
               
               <div class=" news-item ">
@@ -114,7 +114,7 @@
         </div>
       </div>
       <div class="owl-carousel owl-theme" id="videos" >
-        @foreach($videos as $video)
+        @foreach($videos->slice(0, 3) as $video)
         <a data-lity href="#inline{{$video->id}}">
         <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$video->image}}" alt="">
           <div class="card-body text-center"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>
@@ -156,7 +156,7 @@
           @endforeach
             @else
                 
-                    <p colspan="6">There are no data.</p>
+                    <p colspan="6">No hay tweets.</p>
               
             @endif
             </div>
