@@ -27,8 +27,10 @@ class PageController extends Controller
     public function newsarchive(){
         $news = News::paginate(20);
         $videos = Video::paginate(20);
+        $twittes = Twitter::getUserTimeline(['count' => 10, 'format' => 'array']);
+
         $perfilesxeneizes = Perfilesxeneize::all();
-        return view('archive')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes);
+        return view('archive')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
     }
     public function parchive(){
         $news = News::paginate(20);
@@ -45,8 +47,8 @@ class PageController extends Controller
 
         return view('newssingle')->withNews($news)->withNewses($newses);
     }
-    public function singlepref($id){
-        $news = Perfilesxeneize::find($id);
+    public function singlepref($slug){
+        $news = Perfilesxeneize::where('slug', $slug)->first();
         $newses = Perfilesxeneize::paginate(20);
 
         return view('presingle')->withNews($news)->withNewses($newses);

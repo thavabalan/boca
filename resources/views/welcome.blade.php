@@ -88,12 +88,12 @@
                   
               
               <div class=" news-item ">
-              <div class="bg-white card aaSadow border-0"> <a href="news/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt=""> </a>
+              <div class="bg-white card aaSadow border-0"> <a href="noticias/{{$item->slug}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt=""> </a>
                   <div class="card-body">
                     <h6 class="">  {{$item->lead}} </h6>
                   <h5 class="card-title"><a href="noticias/{{$item->slug}}">{{$item->title}}</a></h5>
                     <p class="card-text">{!! Str::limit($item->body, 10) !!}</p>
-                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="news/{{$item->id}}">Ver más..</a> </div>
+                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="noticias/{{$item->slug}}">Ver más..</a> </div>
                 </div>
               </div>
               @endforeach
@@ -152,20 +152,8 @@
           <div class="owl-carousel owl-theme owl-loaded owl-drag " id="rss">
           @if(!empty($twittes))
                 @foreach($twittes as $key => $value) 
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">May 5, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <div class="bg-white card aaSadow border-0 p-3 twt">
-                <blockquote class="twitter-tweet">
-                <img src="{{$value['user']['profile_image_url']}}" class="im">
-                <p lang="en" dir="ltr"><strong>{{ $value['text'] }}</strong> 
-               </blockquote> 
-
-                @if(!empty($value['extended_entities']['media']))
-                                @foreach($value['extended_entities']['media'] as $v)
-                                    <img src="{{ $v['media_url_https'] }}" style="width:100px;">
-                                @endforeach
-                            @endif
-
-</div>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/{{$value['id']}}?ref_src=twsrc%5Etfw">May 5, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                
           @endforeach
             @else
                 
@@ -193,7 +181,7 @@
           <div class="col-md-12 col-lg-12" >
             <div class="row">
               @foreach($perfilesxeneizes as $item)
-              <div class="col-md-4"> <a href="perfiles/{{$item->id}}">
+              <div class="col-md-4"> <a href="perfiles/{{$item->slug}}">
                 <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
                   <div class="card-body">
                     <h5>{{$item->title}}</h5>

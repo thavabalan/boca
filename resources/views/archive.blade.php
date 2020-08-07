@@ -35,12 +35,12 @@
           <div class="row">
               @foreach($news as $item)
             <div class="col-md-3"><div class=" news-item ">
-                <div class="bg-white card aaSadow border-0"> <a href="{{route('news' , $item->id)}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt=""> </a>
+                <div class="bg-white card aaSadow border-0"> <a href="{{url('/noticias')}}/{{$item->slug}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt=""> </a>
                   <div class="card-body">
                     <h6 class=""> {{$item->lead}}  </h6>
                   <h5 class="card-title"><a href="{{url('/noticias')}}/{{$item->slug}}">{{$item->title}}</a></h5>
                     <p class="card-text">{{$item->excerpt}}</p>
-                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="http://localhost/boca/">Ver más..</a> </div>
+                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="{{url('/noticias')}}/{{$item->slug}}">Ver más..</a> </div>
                 </div>
               </div></div>@endforeach
               
@@ -97,41 +97,22 @@
               
               
               
-            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2165px, 0px, 0px); transition: all 0.25s ease 0s; width: 5260px;"><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item active" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item active" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item active" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item active" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item active" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div><div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> <a href="http://localhost/boca/">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss//tweet.png" alt=""> </div>
-                </a> </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
+            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2165px, 0px, 0px); transition: all 0.25s ease 0s; width: 5260px;">
+              
+              <div class="owl-item cloned" style="width: 294.4px; margin-right: 15px;"><div class=" news-item "> 
+                 @if(!empty($twittes))
+                @foreach($twittes as $key => $value) 
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/{{$value['id']}}?ref_src=twsrc%5Etfw">May 5, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                
+          @endforeach
+            @else
+                
+                    <p colspan="6">There are no data.</p>
+              
+            @endif
+              </div></div>
+              
+              </div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
           </div>
         </div>
       </div>
@@ -151,7 +132,7 @@
             <div class="row">
                 @foreach($perfilesxeneizes as $item)
 
-              <div class="col-md-4"> <a href="http://localhost/boca/">
+              <div class="col-md-4"> <a href="{{url('/perfiles')}}/{{$item->slug}}">
                 <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
                   <div class="card-body">
                     <h5>{{$item->title}}</h5>
@@ -162,7 +143,7 @@
                 @endforeach
             </div>
           </div>
-          <div class="col-md-12 text-center mt-4"> <a href="/parchive" class="btn-outline-boca">Más perfiles</a> </div>
+          <div class="col-md-12 text-center mt-4"> <a href="/perfiles" class="btn-outline-boca">Más perfiles</a> </div>
         </div>
       </div>
     </section>

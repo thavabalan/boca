@@ -33,33 +33,32 @@
       
       
       
-    <div class="row ">
-      <div class="col-md-12 noticias">
-        <div class="container mb-5">
-          <div class="mt-3 mb-4">
-            <h2> Noticias
-            </h2>
-          </div>
-          <div class="row flex">
-              @foreach($newses as $item)
-            <div class="col-md-4 content">
-              <div class="news-item">
-              <div class="bg-white card aaSadow border-0"> <a href="news/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
-                  <div class="card-body">
-                    <h6 class="">  </h6>
-                    <h5 class="card-title"><a href="{{url('/noticias')}}/{{$item->slug}}">{{$item->title}}</a></h5>
-                    <p class="card-text">{{$item->excerpt}}</p>
-                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="{{route('news' , $item->id)}}">Ver más..</a> </div>
-                </div>
-              </div>
+    <section class="media media-title pb-5 perfiles">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mt-3 mb-4">
+              <h2>#PerfilesXeneizes</h2>
             </div>
-            @endforeach
-            <div class="clearfix"></div>
-            <div class="col-md-12 text-center mt-3"> <a href="/parchive" class="btn-outline-boca" id="loadMore">Más noticias</a> </div>
           </div>
+          <div class="col-md-12 col-lg-12" >
+            <div class="row">
+              @foreach($newses as $item)
+              <div class="col-md-4"> <a href="{{url('perfiles')}}/{{$item->slug}}">
+                <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
+                  <div class="card-body">
+                    <h5>{{$item->title}}</h5>
+                    <p class="text-white">{{$item->excerpt}}</p>
+                  </div>
+                </div>
+                </a> </div>
+                @endforeach
+            </div>
+          </div>
+          <div class="col-md-12 text-center mt-4"> <a href="/perfiles" class="btn-outline-boca">Más perfiles</a> </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
 @endsection

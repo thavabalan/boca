@@ -21,40 +21,35 @@
     
       
       
-      
-    <section class="news px-3 noticias" style="
-      padding-top: 9em;
-  ">
-      <div class="container-fluid ">
+    <section class="media media-title pb-5 perfiles" style="
+    padding-top: 9em;
+">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-md-12">
             <div class="mt-3 mb-4">
-              <h2 class="noticias1">#PerfilesXeneizes</h2>
+              <h2>#PerfilesXeneizes</h2>
             </div>
           </div>
-          <div class="row">
+          <div class="col-md-12 col-lg-12" >
+            <div class="row">
               @foreach($perfilesxeneizes as $item)
-            <div class="col-md-3"><div class=" news-item ">
-                <div class="bg-white card aaSadow border-0"> <a href="perfiles/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
+              <div class="col-md-4"> <a href="perfiles/{{$item->slug}}">
+                <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
                   <div class="card-body">
-                    <h6 class=""> </h6>
-                    <h5 class="card-title"><a href="perfiles/{{$item->id}}">{{$item->title}}</a></h5>
-                    <p class="card-text">{{$item->excerpt}}</p>
-                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="http://localhost/boca/">Ver más..</a> </div>
+                    <h5>{{$item->title}}</h5>
+                    <p class="text-white">{{$item->excerpt}}</p>
+                  </div>
                 </div>
-              </div></div>@endforeach
-              
-            
+                </a> </div>
+                @endforeach
+            </div>
           </div>
-          <div class="col-md-12 text-center"> <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                {{ $perfilesxeneizes->links() }}
-            </ul>
-          </nav> </div>
+          <div class="col-md-12 text-center mt-4"> <a href="/perfiles" class="btn-outline-boca">Más perfiles</a> </div>
         </div>
       </div>
-    </section>
-      
+    </section> 
+  
       
       
     <section class="features videos">
