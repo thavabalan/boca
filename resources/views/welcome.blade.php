@@ -6,6 +6,13 @@
   background-color:red;
   min-height:300px;
 }
+
+.im{
+  border-radius: 50%;
+  height: 50px;
+  width:50px !important;
+}
+
   </style>
 <main role="main">
 	
@@ -145,6 +152,7 @@
                 @foreach($twittes as $key => $value) 
                 <div class="bg-white card aaSadow border-0 p-3 twt">
                 <blockquote class="twitter-tweet">
+                <img src="{{$value['user']['profile_image_url']}}" class="im">
                 <p lang="en" dir="ltr"><strong>{{ $value['text'] }}</strong> 
                </blockquote> 
 
