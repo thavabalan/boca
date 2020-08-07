@@ -23,9 +23,11 @@
       
       <!-- comment -->
       
-    <section class="intro-video">
+    <section class="intro-video intro">
+	<div id="playCTA"><span class="play-text">Un club atletico</span> <span class="ply-btn medium"><i class="fa fa-play"></i></span></div>
       <div class="videoContainer">
-        <video autoplay loop muted playsinline id="homevideo">
+        <img id="videoCover" src="http://deportesboca.lineadgroup.com/storage/play.jpg"/>
+	<video loop playsinline id="homevideo">
           <source src="https://content.jwplatform.com/videos/sVzKg4Ti-AuTjtEnY.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
@@ -34,9 +36,9 @@
         <div id="mute-video"><i class="fa fa-volume-up fa-2x"></i><i class="fa fa-volume-off fa-2x"></i></div>
       </div>
       <a href="javascript:void(0);" class="scroll-down" title="Scroll Down">
-      <div class="mousey">
+     <!-- <div class="mousey">
         <div class="scroller"></div>
-      </div>
+      </div>-->
       </a>
    </section>
       

@@ -7,7 +7,7 @@
 <meta name="keywords" />
 <meta name="description" />
 	
-	
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
@@ -25,6 +25,67 @@
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}" />
 <!-- Menu -->
 
+<style>
+.intro #videoCover{
+    left: 0;
+}
+.mega-menu .menu-logo{
+    position: absolute;
+    transition: all .5s ease;
+    left: 0;
+}
+.mega-menu .menu-bar{
+	right: 0;
+    transition: all .5s ease;
+    transition-delay: .5s;
+	position:absolute;
+}
+.mega-menu.intro .menu-bar{
+    right: -600px;
+}
+.mega-menu.intro .menu-logo{
+    left: calc(50% - 30px);
+}
+#playCTA{
+            position: absolute;
+            z-index: 2;
+            color: white;
+            font-family: 'Bebas Neue', cursive;
+            right: 2em;
+            top: 50%;
+            cursor: pointer;
+width:100%;
+text-align:right;
+font-style: italic;
+        }
+#playCTA .play-text{
+vertical-align: middle;
+    font-size: 50px;
+margin-left:5px;
+}
+#playCTA .ply-btn.medium{
+	    margin-left: 25px;
+	    line-height: 58px;
+	padding-top:0;
+}
+.intro #videoCover{
+left:0;
+}
+	#videoCover{
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            position: absolute;
+    left: -100%;
+    transition: all .5s ease;
+        }
+@media screen and (max-width:600px){
+	#playCTA{
+	right:1em;
+}
+}
+</style>
 </head>
 
 <body>
@@ -32,13 +93,13 @@
 	
 	
 <div id="top-navbar" class="menu">
-  <nav id="menu" class="mega-menu">
+  <nav id="menu" class="mega-menu {{ Request::is('/') ? 'intro' : '' }}">
     <section class="menu-list-items">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <ul class="menu-logo">
-              <li> <a href="/"><img id="logo_img" src="{{asset('images/logo.png')}}" alt="logo"> </a> </li>
+              <li> <a href="/"><img id="logo_img" style="max-width:100px !important" src="/storage/{{setting('site.logo')}}" alt="logo"> </a> </li>
             </ul>
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
@@ -132,10 +193,8 @@
 
 
 <script>
-
-
 $(document).ready(function () {
-
+	if(window.location.pathname=='/') $('html').css('overflow', 'hidden');
 	var params = {};
 	var ps = window.location.search.split(/\?|&/);
 	for (var i = 0; i < ps.length; i++) {
@@ -144,6 +203,9 @@ $(document).ready(function () {
 			params[p[0]] = p[1];
 		}
 	}
+$(".fa-volume-up").hide();
+                $(".fa-volume-off").hide();
+/*
 	if (ps == ",p") {
 		$("#homevideo").prop('muted', false);
 		$(".fa-volume-up").show();
@@ -155,7 +217,7 @@ $(document).ready(function () {
 		$(".fa-volume-off").show();
 	}
 
-
+*/
 
 
 
@@ -175,6 +237,26 @@ $(document).ready(function () {
 			$(".fa-volume-off").show();
 		}
 	});
+	$("#playCTA").click(function () {
+$("html").css("overflow","auto")
+            $('.intro').removeClass('intro');
+if(Cookies.get('videoplayed'))
+{
+$("#homevideo").prop('muted', true);
+$(".fa-volume-up").hide();
+                $(".fa-volume-off").show();
+}
+else
+{
+$(".fa-volume-up").show();
+                $(".fa-volume-off").hide();
+Cookies.set('videoplayed', true);
+$("#homevideo").prop('muted', false);
+}		
+$("#homevideo")[0].play();
+		$(this).hide();
+		//$('#videoCover').hide(); 
+        });
  
 });
 	
