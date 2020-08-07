@@ -91,7 +91,6 @@ left:0;
 <body>
 	
 	
-	{{var_dump(Request)}}
 <div id="top-navbar" class="menu">
   <nav id="menu" class="mega-menu {{ Request::is('/') ? 'intro' : '' }}">
     <section class="menu-list-items">
@@ -198,6 +197,15 @@ $(document).ready(function () {
   {
     window.scrollTo(0,0);
     $('html').css('overflow', 'hidden');
+  }
+  else
+  {
+    $('.mega-menu .menu-logo').css('transition','none');
+    $('.mega-menu .menu-bar').css('transition','none');
+    $("#homevideo").prop('muted', true);
+    $("#homevideo").prop('autoplay', true);
+    $('.intro').removeClass('intro');
+
   }
 	var params = {};
 	var ps = window.location.search.split(/\?|&/);
