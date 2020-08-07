@@ -194,7 +194,11 @@ left:0;
 
 <script>
 $(document).ready(function () {
-	if(window.location.pathname=='/') $('html').css('overflow', 'hidden');
+  if(window.location.pathname=='/' && !window.location.hash) 
+  {
+    window.scrollTo(0,0);
+    $('html').css('overflow', 'hidden');
+  }
 	var params = {};
 	var ps = window.location.search.split(/\?|&/);
 	for (var i = 0; i < ps.length; i++) {
