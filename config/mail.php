@@ -31,6 +31,8 @@ return [
     | Supported: "smtp", "sendmail", "mailgun", "ses",
     |            "postmark", "log", "array"
     |
+
+    
     */
 
     'mailers' => [
