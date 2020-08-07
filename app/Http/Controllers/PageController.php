@@ -20,7 +20,7 @@ class PageController extends Controller
         $perfilesxeneizes = Perfilesxeneize::all();
         $sports = Sport::all();
         $momentos = Momento::all();
-        $twittes = Twitter::getUserTimeline(['count' => 10, 'format' => 'array']);
+        $twittes = Twitter::getUserTimeline(['screen_name' => 'deportesboca', 'count' => 10, 'format' => 'array']);
         return view('welcome')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withSports($sports)->withMomentos($momentos)->withTwittes($twittes);
     }
 
