@@ -152,7 +152,7 @@
           <div class="owl-carousel owl-theme owl-loaded owl-drag " id="rss">
           @if(!empty($twittes))
                 @foreach($twittes as $key => $value) 
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">{{$value['text']}}</p> {{$value['user']['name']}} (@{{$value['user']['screen_name']}}) <a href="https://twitter.com/Interior/status/{{$value['id']}}?ref_src=twsrc%5Etfw">{{$value['created_at']}}</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">{{$value['text']}}</p> {{$value['user']['name']}} (@ {{$value['user']['screen_name']}}) <a href="https://twitter.com/Interior/status/{{$value['id']}}?ref_src=twsrc%5Etfw">{{$value['created_at']}}</a></blockquote> 
 
           @endforeach
             @else
@@ -160,6 +160,7 @@
                     <p colspan="6">No hay tweets.</p>
               
             @endif
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             
 </div>
