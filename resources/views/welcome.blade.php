@@ -10,8 +10,8 @@
       
       
       
-    <section class="intro-video">
-	<div id="playCTA">Un club atletico <i class="fa fa-play"></i></div>
+    <section class="intro-video intro">
+	<div id="playCTA"><span class="play-text">Un club atletico</span> <span class="ply-btn medium"><i class="fa fa-play"></i></span></div>
       <div class="videoContainer">
         <img id="videoCover" src="http://deportesboca.lineadgroup.com/storage/play.jpg"/>
 	<video loop playsinline id="homevideo">
@@ -23,9 +23,9 @@
         <div id="mute-video"><i class="fa fa-volume-up fa-2x"></i><i class="fa fa-volume-off fa-2x"></i></div>
       </div>
       <a href="javascript:void(0);" class="scroll-down" title="Scroll Down">
-      <div class="mousey">
+     <!-- <div class="mousey">
         <div class="scroller"></div>
-      </div>
+      </div>-->
       </a>
    </section>
       

@@ -7,7 +7,7 @@
 <meta name="keywords" />
 <meta name="description" />
 	
-	
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
@@ -26,29 +26,60 @@
 <!-- Menu -->
 
 <style>
+.intro #videoCover{
+    left: 0;
+}
+.mega-menu .menu-logo{
+    position: absolute;
+    transition: all .5s ease;
+    left: 0;
+}
+.mega-menu .menu-bar{
+	right: 0;
+    transition: all .5s ease;
+    transition-delay: .5s;
+	position:absolute;
+}
+.mega-menu.intro .menu-bar{
+    right: -600px;
+}
+.mega-menu.intro .menu-logo{
+    left: calc(50% - 30px);
+}
 #playCTA{
             position: absolute;
             z-index: 2;
             color: white;
-            font-size: 50px;
             font-family: 'Bebas Neue', cursive;
             right: 2em;
             top: 50%;
             cursor: pointer;
 width:100%;
 text-align:right;
+font-style: italic;
         }
-#playCTA i{
+#playCTA .play-text{
+vertical-align: middle;
+    font-size: 50px;
 margin-left:5px;
 }
-        #videoCover{
+#playCTA .ply-btn.medium{
+	    margin-left: 25px;
+	    line-height: 58px;
+	padding-top:0;
+}
+.intro #videoCover{
+left:0;
+}
+	#videoCover{
             object-fit: cover;
             width: 100%;
             height: 100vh;
             z-index: 0;
             position: absolute;
+    left: -100%;
+    transition: all .5s ease;
         }
-
 @media screen and (max-width:600px){
 	#playCTA{
 	right:1em;
@@ -62,7 +93,7 @@ margin-left:5px;
 	
 	
 <div id="top-navbar" class="menu">
-  <nav id="menu" class="mega-menu">
+  <nav id="menu" class="mega-menu {{ Request::is('/') ? 'intro' : '' }}">
     <section class="menu-list-items">
       <div class="container-fluid">
         <div class="row">
@@ -162,10 +193,8 @@ margin-left:5px;
 
 
 <script>
-
-
 $(document).ready(function () {
-
+	if(window.location.pathname=='/') $('html').css('overflow', 'hidden');
 	var params = {};
 	var ps = window.location.search.split(/\?|&/);
 	for (var i = 0; i < ps.length; i++) {
@@ -174,7 +203,7 @@ $(document).ready(function () {
 			params[p[0]] = p[1];
 		}
 	}
-$(".fa-volume-up").show();
+$(".fa-volume-up").hide();
                 $(".fa-volume-off").hide();
 /*
 	if (ps == ",p") {
@@ -209,9 +238,24 @@ $(".fa-volume-up").show();
 		}
 	});
 	$("#playCTA").click(function () {
-            $("#homevideo")[0].play();
+$("html").css("overflow","auto")
+            $('.intro').removeClass('intro');
+if(Cookies.get('videoplayed'))
+{
+$("#homevideo").prop('muted', true);
+$(".fa-volume-up").hide();
+                $(".fa-volume-off").show();
+}
+else
+{
+$(".fa-volume-up").show();
+                $(".fa-volume-off").hide();
+Cookies.set('videoplayed', true);
+$("#homevideo").prop('muted', false);
+}		
+$("#homevideo")[0].play();
 		$(this).hide();
-		$('#videoCover').hide(); 
+		//$('#videoCover').hide(); 
         });
  
 });
