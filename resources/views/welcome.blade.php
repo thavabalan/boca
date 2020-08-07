@@ -1,7 +1,20 @@
 @extends('layout.main')
 @section('content')
+
+<style>
+.twt{
+  background-color:red;
+  min-height:300px;
+}
+
+.im{
+  border-radius: 50%;
+  height: 50px;
+  width:50px !important;
+}
+
+  </style>
 <main role="main">
-	
 	
 	
     <div class="container-fluid">
@@ -131,31 +144,35 @@
               <h2>@deportesboca</h2>
             </div>
           </div>
+
+
           <div class="col-md-12">
-            <div class="owl-carousel owl-theme " id="rss">
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
-              <div class=" news-item "> <a href="">
-                <div class="bg-white card aaSadow border-0"> <img class="card-img-top" src="images/rss/tweet.png" alt=""> </div>
-                </a> </div>
+          <div class="owl-carousel owl-theme owl-loaded owl-drag " id="rss">
+          @if(!empty($twittes))
+                @foreach($twittes as $key => $value) 
+                <div class="bg-white card aaSadow border-0 p-3 twt">
+                <blockquote class="twitter-tweet">
+                <img src="{{$value['user']['profile_image_url']}}" class="im">
+                <p lang="en" dir="ltr"><strong>{{ $value['text'] }}</strong> 
+               </blockquote> 
+
+                @if(!empty($value['extended_entities']['media']))
+                                @foreach($value['extended_entities']['media'] as $v)
+                                    <img src="{{ $v['media_url_https'] }}" style="width:100px;">
+                                @endforeach
+                            @endif
+
+</div>
+          @endforeach
+            @else
+                
+                    <p colspan="6">There are no data.</p>
+              
+            @endif
             </div>
-          </div>
+            
+</div>
+
         </div>
       </div></div>
     </section>
