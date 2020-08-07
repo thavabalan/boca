@@ -204,6 +204,9 @@ $(document).ready(function () {
     $('.mega-menu .menu-bar').css('transition','none');
     $("#homevideo").prop('muted', true);
     $("#homevideo").prop('autoplay', true);
+    $(".fa-volume-up").hide();
+    $(".fa-volume-off").show();
+    $('#playCTA').hide();
     $('.intro').removeClass('intro');
 
   }
