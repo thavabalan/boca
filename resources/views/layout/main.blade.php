@@ -91,7 +91,7 @@ left:0;
 <body>
 	
 	
-	
+	{{var_dump(URL)}}
 <div id="top-navbar" class="menu">
   <nav id="menu" class="mega-menu {{ Request::is('/') ? 'intro' : '' }}">
     <section class="menu-list-items">
@@ -242,13 +242,13 @@ $(".fa-volume-up").hide();
 		}
 	});
 	$("#playCTA").click(function () {
-$("html").css("overflow","auto")
-            $('.intro').removeClass('intro');
+    $("html").css("overflow","auto")
+    $('.intro').removeClass('intro');
 if(Cookies.get('videoplayed'))
 {
-$("#homevideo").prop('muted', true);
-$(".fa-volume-up").hide();
-                $(".fa-volume-off").show();
+    $("#homevideo").prop('muted', true);
+    $(".fa-volume-up").hide();
+    $(".fa-volume-off").show();
 }
 else
 {
