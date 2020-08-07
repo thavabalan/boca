@@ -248,7 +248,7 @@ $(document).ready(function () {
 			},
 			1000: {
 				dots: true,
-				items: 5,
+				items: 4,
 				nav: false
 
 			}
