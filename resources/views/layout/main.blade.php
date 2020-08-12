@@ -195,7 +195,7 @@ left:0;
 $(document).ready(function () {
   $("#homevideo")[0].addEventListener('ended',()=>{
     $(this).prop('muted', true);
-    this.play();
+    $("#homevideo")[0].play();
   });
   if(window.location.pathname=='/' && !window.location.hash) 
   {
