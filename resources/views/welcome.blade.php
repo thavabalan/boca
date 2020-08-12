@@ -27,7 +27,7 @@
 	<div id="playCTA"><span class="play-text">Un club atletico</span> <span class="ply-btn medium"><i class="fa fa-play"></i></span></div>
       <div class="videoContainer">
         <img id="videoCover" src="http://deportesboca.lineadgroup.com/storage/play.jpg"/>
-	<video loop playsinline id="homevideo">
+	<video playsinline id="homevideo">
           <source src="https://content.jwplatform.com/videos/sVzKg4Ti-AuTjtEnY.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
@@ -93,7 +93,7 @@
                     <h6 class="">  {{$item->lead}} </h6>
                   <h5 class="card-title"><a href="noticias/{{$item->slug}}">{{$item->title}}</a></h5>
                     <p class="card-text">{!! Str::limit($item->body, 10) !!}</p>
-                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="noticias/{{$item->slug}}">Ver más..</a> </div>
+                    <!--<small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small>--> <a class="more-news" href="noticias/{{$item->slug}}">Ver más..</a> </div>
                 </div>
               </div>
               @endforeach

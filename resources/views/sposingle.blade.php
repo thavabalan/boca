@@ -76,7 +76,7 @@
                   <h6 class=""> {{$news->lead}} </h6>
                   <h5 class="card-title"><a href="{{url('/noticias')}}/{{$news->slug}}">{{$news->title}}</a></h5>
                   <p class="card-text">{!! Str::limit($news->body, 30) !!}</p>
-                  <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$news->created_at->format('d F Y')}} </small> <a class="more-news" href="{{url('/noticias')}}/{{$news->slug}}">Ver más..</a> </div>
+                  <!--<small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$news->created_at->format('d F Y')}} </small>--> <a class="more-news" href="{{url('/noticias')}}/{{$news->slug}}">Ver más..</a> </div>
               </div>
             </div>
             @endforeach

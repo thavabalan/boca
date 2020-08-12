@@ -140,7 +140,7 @@ left:0;
       </div>
       <div class="col-md-2 text-center ">
         <ul class="list-unstyled socials">
-          <li><a class="twitter" target="_blank" href=""><i class="fab fa-twitter"></i></a></li>
+          <li><a class="twitter" target="_blank" href="https://twitter.com/deportesboca"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
       <div class="clearfix"></div>
@@ -193,8 +193,13 @@ left:0;
 
 <script>
 $(document).ready(function () {
+  $("#homevideo")[0].addEventListener('ended',()=>{
+    $(this).prop('muted', true);
+    this.play();
+  });
   if(window.location.pathname=='/' && !window.location.hash) 
   {
+    $('.menu-logo a').attr('href','#');
     window.scrollTo(0,0);
     $('html').css('overflow', 'hidden');
   }
@@ -253,6 +258,7 @@ $(".fa-volume-up").hide();
 		}
 	});
 	$("#playCTA").click(function () {
+    $('.menu-logo a').attr('href','/');
     $("html").css("overflow","auto")
     $('.intro').removeClass('intro');
 if(Cookies.get('videoplayed'))

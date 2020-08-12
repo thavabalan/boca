@@ -21,10 +21,10 @@ class ContactUsFormController extends Controller
 
         ), function($message) use ($request){
             $message->from($request->email);
-            $message->to('eduardo.linead@gmail.com', 'Admin')->subject($request->get('subject'));
+            $message->to('deportesamateurs@bocajuniors.com.ar', 'Admin')->subject($request->get('subject'));
         });
 
-        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+        return back()->with('success', 'Recibimos su consulta, gracias por contactarse.');
     }
 
     public function PhoneNumber(Request $request) {
@@ -39,10 +39,10 @@ class ContactUsFormController extends Controller
             
 
         ), function($message) use ($request){
-            $message->from('noreply@mocacertifications.com');
-            $message->to('helpdesk@mocacertifications.com', 'Admin')->subject($request->get('number'));
+            $message->from('deportesamateurs@bocajuniors.com.ar');
+            $message->to('deportesamateurs@bocajuniors.com.ar', 'Admin')->subject($request->get('number'));
         });
 
-        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+        return back()->with('success', 'Recibimos su consulta, gracias por contactarse.');
     }
 }
