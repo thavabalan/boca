@@ -194,7 +194,7 @@ left:0;
 <script>
 $(document).ready(function () {
   $("#homevideo")[0].addEventListener('ended',()=>{
-    $(this).prop('muted', true);
+    $("#homevideo").prop('muted', true);
     $("#homevideo")[0].play();
   });
   if(window.location.pathname=='/' && !window.location.hash) 
