@@ -196,6 +196,8 @@ $(document).ready(function () {
   $("#homevideo")[0].addEventListener('ended',()=>{
     $("#homevideo").prop('muted', true);
     $("#homevideo")[0].play();
+    $(".fa-volume-up").hide();
+    $(".fa-volume-off").show();
   });
   if(window.location.pathname=='/' && !window.location.hash) 
   {
