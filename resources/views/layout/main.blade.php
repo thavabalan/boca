@@ -258,6 +258,7 @@ $(".fa-volume-up").hide();
 		}
 	});
 	$("#playCTA").click(function () {
+    $('#videoCover').hide();
     $('.menu-logo a').attr('href','/');
     $("html").css("overflow","auto")
     $('.intro').removeClass('intro');
