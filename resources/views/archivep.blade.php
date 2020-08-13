@@ -32,6 +32,8 @@
             </div>
           </div>
           <div class="col-md-12 col-lg-12" >
+                      <div class="infinite-scroll">
+
             <div class="row">
               @foreach($perfilesxeneizes as $item)
               <div class="col-md-4"> <a href="perfiles/{{$item->slug}}">
@@ -44,8 +46,14 @@
                 </a> </div>
                 @endforeach
             </div>
+            <div class="col-md-12 text-center"> <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {{ $perfilesxeneizes->links() }}
+            </ul>
+          </nav> </div>
+          </div>    
           </div>
-          <div class="col-md-12 text-center mt-4"> <a href="/perfiles" class="btn-outline-boca">Más perfiles</a> </div>
+          <!-- <div class="col-md-12 text-center mt-4"> <a href="/perfiles" class="btn-outline-boca">Más perfiles</a> </div> -->
         </div>
       </div>
     </section> 
