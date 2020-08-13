@@ -173,7 +173,7 @@ left:0;
 	
 	
 <script src="{{asset('assets/js/jquery-3.5.0.min.js')}}"></script> 
-<scrtipt type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
 <script src="{{asset('assets/js/bootstrap.min.js')}}"></script> 
 <script src="{{asset('assets/js/wow.min.js')}}"></script> 
 <script src="{{asset('assets/js/fontawesome.min.js')}}"></script> 
