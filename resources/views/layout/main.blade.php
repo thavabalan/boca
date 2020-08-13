@@ -104,7 +104,7 @@ left:0;
               <ul class="menu-links" style="display: none;  overflow: auto;">
                 <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/">Home</a> </li>
                 <li class="menu-item-parent"> <a href="/#deportes1">Deportes</a> </li>
-                <li class="menu-item-parent {{ Request::is('/noticias') ? 'active' : '' }}"> <a href="{{ url('/noticias' )}}">Noticias</a> </li>
+                <li class="menu-item-parent {{ Request::is('noticias') ? 'active' : '' }}"> <a href="{{ url('/noticias' )}}">Noticias</a> </li>
               <li class="menu-item-parent {{ Request::is('/videos') ? 'active' : '' }}"> <a href="/videos">Videos</a> </li>
                 <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
                 <li class="menu-item-parent {{ Request::is('/perfiles') ? 'active' : '' }}"> <a href="{{route('perfiles')}}">#Perfilesxeneixes</a> </li>
