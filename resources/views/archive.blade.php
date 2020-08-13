@@ -33,6 +33,7 @@
             </div>
           </div>
           <div class="row">
+          <div class="infinite-scroll">
               @foreach($news as $item)
             <div class="col-md-3"><div class=" news-item ">
                 <div class="bg-white card aaSadow border-0"> <a href="{{url('/noticias')}}/{{$item->slug}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->top_image}}" alt=""> </a>
@@ -43,8 +44,7 @@
                     <!--<small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small>--> <a class="more-news" href="{{url('/noticias')}}/{{$item->slug}}">Ver más..</a> </div>
                 </div>
               </div></div>@endforeach
-              
-            
+          </div>            
           </div>
           <div class="col-md-12 text-center"> <nav aria-label="Page navigation example">
             <ul class="pagination">

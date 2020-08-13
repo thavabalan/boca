@@ -25,7 +25,7 @@ class PageController extends Controller
     }
 
     public function newsarchive(){
-        $news = News::paginate(20);
+        $news = News::paginate(4);
         $videos = Video::paginate(20);
         $twittes = Twitter::getUserTimeline(['count' => 10, 'format' => 'array']);
 
