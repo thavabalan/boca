@@ -18,8 +18,10 @@ Route::get('/noticias','PageController@newsarchive')->name(
     'newsarchive'
 );
 Route::get('/perfiles','PageController@parchive')->name('perfiles');
+Route::get('/videos','PageController@videoarchive')->name('perfiles');
 Route::get('/noticias/{slug}','PageController@singlenews')->name('news');
 Route::get('/perfiles/{slug}','PageController@singlepref');
+Route::get('/videos/{id}','PageController@singlevideo');
 Route::get('/spo/{id}','PageController@singlesport');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

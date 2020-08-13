@@ -38,7 +38,12 @@ class PageController extends Controller
         $perfilesxeneizes = Perfilesxeneize::paginate(20);
         return view('archivep')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes);
     }
-
+    public function videoarchive(){
+        $videos = Video::paginate(20);
+        $twittes = Twitter::getUserTimeline(['count' => 10, 'format' => 'array']);
+        $perfilesxeneizes = Perfilesxeneize::all();
+        return view('archivev')->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
+    }
     public function singlenews($slug){
         $news = News::where('slug', $slug)
 
@@ -58,5 +63,11 @@ class PageController extends Controller
         $newses = News::paginate(20);
         $videos = Video::paginate(20);
         return view('sposingle')->withSport($sport)->withNewses($newses)->withVideos($videos);
+    }
+    public function singlevideo($id){
+        $news = Video::find($id);
+        $newses = Video::paginate(20);
+
+        return view('videosingle')->withNews($news)->withNewses($newses);
     }
 }

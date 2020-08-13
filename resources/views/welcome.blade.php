@@ -126,7 +126,7 @@
        
         @endforeach
        </div>
-      <div class="col-md-12 videos-bottom"> <a href="" class="btn-outline-boca-amarillo">Ir a la playlist</a> </div>
+      <div class="col-md-12 videos-bottom"> <a href="/videos" class="btn-outline-boca-amarillo">Ir a la playlist</a> </div>
       </div>
     </section>
     @foreach($videos as $video)
