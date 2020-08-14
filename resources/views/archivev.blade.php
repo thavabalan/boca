@@ -35,8 +35,8 @@
           <div class="row">
               @foreach($videos as $item)
             <div class="col-md-3"><div class=" news-item ">
-                <div class="bg-white card aaSadow border-0"> <a href="{{url('/videos')}}/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
-                <span class="ply-btn medium"><i class="fa fa-play"></i></span>  
+                <div class="bg-white card aaSadow border-0"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>   <a href="{{url('/videos')}}/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
+                
                 <div class="card-body">
                     <h6 class=""> {{$item->lead}}  </h6>
                   <h5 class="card-title"><a href="{{url('/videos')}}/{{$item->id}}">{{$item->title}}</a></h5>

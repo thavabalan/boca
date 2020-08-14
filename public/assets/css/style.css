@@ -1359,7 +1359,7 @@ box-shadow: 10px 10px 14px 2px rgba(212,212,212,1); padding: 2rem; min-height: 4
     width: 100%;
     }
 
-    .bg-white.card{
+    .bg-white.card .ply-btn.medium {
         position: absolute;
     top: 100px;
     left: 50%;
