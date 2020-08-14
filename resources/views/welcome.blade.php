@@ -92,7 +92,7 @@
                   <div class="card-body">
                     <h6 class="">  {{$item->lead}} </h6>
                   <h5 class="card-title"><a href="noticias/{{$item->slug}}">{{$item->title}}</a></h5>
-                    <p class="card-text">{!! Str::limit($item->body, 10) !!}</p>
+                    <p class="card-text">{!! Str::limit($item->excerpt, 100) !!}</p>
                     <!--<small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small>--> <a class="more-news" href="noticias/{{$item->slug}}">Ver más..</a> </div>
                 </div>
               </div>
