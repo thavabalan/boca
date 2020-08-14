@@ -27,7 +27,7 @@
             @isset($news->video)
             <div class="video-responsive">
 
-            <iframe src="https://www.youtube.com/embed/{$news->video}}" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/{{$news->video}}" frameborder="0" allowfullscreen></iframe>
               </div>
             @endisset   
               {!!$news->body!!}
