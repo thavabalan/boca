@@ -33,10 +33,11 @@ class PageController extends Controller
         return view('archive')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
     }
     public function parchive(){
-        $news = News::paginate(20);
+        $news = News::latest()->paginate(20);
         $videos = Video::latest()->paginate(20);
         $perfilesxeneizes = Perfilesxeneize::latest()->paginate(12);
-        return view('archivep')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes);
+        $twittes = Twitter::getUserTimeline(['screen_name' => 'deportesboca', 'count' => 10, 'format' => 'array']);
+        return view('archivep')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
     }
     public function videoarchive(){
         $videos = Video::latest()->paginate(20);
@@ -48,7 +49,7 @@ class PageController extends Controller
         $news = News::where('slug', $slug)
 
         ->first();
-        $newses = News::paginate(20);
+        $newses = News::latest()->paginate(20);
 
         return view('newssingle')->withNews($news)->withNewses($newses);
     }
@@ -60,7 +61,7 @@ class PageController extends Controller
     }
     public function singlesport($id){
         $sport = Sport::find($id);
-        $newses = News::paginate(20);
+        $newses = News::latest()->paginate(20);
         $videos = Video::latest()->paginate(20);
         return view('sposingle')->withSport($sport)->withNewses($newses)->withVideos($videos);
     }
