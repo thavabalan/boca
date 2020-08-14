@@ -41,7 +41,7 @@
                     <h6 class=""> {{$item->lead}}  </h6>
                   <h5 class="card-title"><a href="{{url('/videos')}}/{{$item->id}}">{{$item->title}}</a></h5>
                     <p class="card-text">{{$item->excerpt}}</p>
-                    <small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> <a class="more-news" href="{{url('/videos')}}/{{$item->id}}">Ver más..</a> </div>
+                     <a class="more-news" href="{{url('/videos')}}/{{$item->id}}">Ver más..</a> </div>
                 </div>
               </div></div>@endforeach
               
