@@ -32,7 +32,7 @@ return [
     |            "postmark", "log", "array"
     |
 
-    
+
     */
 
     'mailers' => [
@@ -42,7 +42,7 @@ return [
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'password' => env('2PKGrGA2NiA5sxx'),
             'timeout' => null,
             'auth_mode' => null,
         ],
