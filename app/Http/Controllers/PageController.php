@@ -16,7 +16,7 @@ class PageController extends Controller
 {
     public function index(){
         $news = News::all();
-        $videos = Video::latest()->all();
+        $videos = Video::all();
         $perfilesxeneizes = Perfilesxeneize::all();
         $sports = Sport::all();
         $momentos = Momento::all();
