@@ -214,9 +214,10 @@ $(document).ready(function () {
     $("#homevideo").prop('autoplay', true);
     $(".fa-volume-up").hide();
     $(".fa-volume-off").show();
+    $('#videoCover').hide();
     $('#playCTA').hide();
     $('.intro').removeClass('intro');
-
+    $("#homevideo")[0].play();
   }
 	var params = {};
 	var ps = window.location.search.split(/\?|&/);
