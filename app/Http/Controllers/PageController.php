@@ -16,7 +16,7 @@ class PageController extends Controller
 {
     public function index(){
         $news = News::all();
-        $videos = Video::all();
+        $videos = Video::latest()->all();
         $perfilesxeneizes = Perfilesxeneize::all();
         $sports = Sport::all();
         $momentos = Momento::all();
@@ -26,7 +26,7 @@ class PageController extends Controller
 
     public function newsarchive(){
         $news = News::latest()->paginate(12);
-        $videos = Video::paginate(20);
+        $videos = Video::latest()->paginate(20);
         $twittes = Twitter::getUserTimeline(['screen_name' => 'deportesboca', 'count' => 10, 'format' => 'array']);
 
         $perfilesxeneizes = Perfilesxeneize::all();
@@ -34,12 +34,12 @@ class PageController extends Controller
     }
     public function parchive(){
         $news = News::paginate(20);
-        $videos = Video::paginate(20);
+        $videos = Video::latest()->paginate(20);
         $perfilesxeneizes = Perfilesxeneize::latest()->paginate(12);
         return view('archivep')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes);
     }
     public function videoarchive(){
-        $videos = Video::paginate(20);
+        $videos = Video::latest()->paginate(20);
         $twittes = Twitter::getUserTimeline(['screen_name' => 'deportesboca', 'count' => 10, 'format' => 'array']);
         $perfilesxeneizes = Perfilesxeneize::all();
         return view('archivev')->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
@@ -61,12 +61,12 @@ class PageController extends Controller
     public function singlesport($id){
         $sport = Sport::find($id);
         $newses = News::paginate(20);
-        $videos = Video::paginate(20);
+        $videos = Video::latest()->paginate(20);
         return view('sposingle')->withSport($sport)->withNewses($newses)->withVideos($videos);
     }
     public function singlevideo($id){
-        $news = Video::find($id);
-        $newses = Video::paginate(20);
+        $news = Video::latest()->find($id);
+        $newses = Video::latest()->paginate(20);
 
         return view('videosingle')->withNews($news)->withNewses($newses);
     }
