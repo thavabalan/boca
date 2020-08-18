@@ -34,7 +34,7 @@
       
       
     <div class="row ">
-      <div class="col-md-12 noticias">
+      <div class="col-md-12 noticias news">
         <div class="container mb-5">
           <div class="mt-3 mb-4">
             <h2>Noticias</h2>
