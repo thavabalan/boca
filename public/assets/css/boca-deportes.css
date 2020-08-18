@@ -1000,6 +1000,7 @@ a.googleplus:hover, a.googleplus:focus {
 */
 .more-news {
     position: absolute;
+    bottom: 0;
     right: 15px;
     transition: all ease .3s;
     color: #444;
