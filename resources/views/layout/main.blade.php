@@ -98,7 +98,7 @@ left:0;
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <ul class="menu-logo">
-              <li> <a href="/"><img id="logo_img" style="max-width:100px !important" src="/storage/{{setting('site.logo')}}" alt="logo"> </a> </li>
+              <li> <a href="/#home"><img id="logo_img" style="max-width:100px !important" src="/storage/{{setting('site.logo')}}" alt="logo"> </a> </li>
             </ul>
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
