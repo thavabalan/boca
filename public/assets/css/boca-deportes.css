@@ -941,6 +941,7 @@ a.googleplus:hover, a.googleplus:focus {
 }
 .news .card-body p {
     -webkit-line-clamp: 4;
+    max-height: 94px;
 }
 .news a {
     text-decoration: none;
@@ -1383,6 +1384,15 @@ a.back-to-top:hover {
     color: #fff;
 }          
 
+.news-item>div>a{
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.666666%;
+}
+.news-item>div>a>img{
+    position: absolute;
+    top: 0;
+}
 
 
  
