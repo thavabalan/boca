@@ -24,7 +24,9 @@
             <div class="col-md-12">
               <h6 class="mt-5">{{$news->created_at->format('d-m-y')}}</h6>
             <h2 class="">{{$news->title}}</h2>
+            <div class="video-responsive">
               {!!$news->embed_code!!}
+</div>
             </div>
           </div>
         </div>
