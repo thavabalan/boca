@@ -27,7 +27,7 @@ class PageController extends Controller
     public function newsarchive(){
         $news = News::latest()->paginate(12);
         $videos = Video::latest()->paginate(20);
-        $twittes = Twitter::getUserTimeline(['screen_name' => 'deportesboca', 'count' => 10, 'format' => 'array']);
+        $twittes = Twitter::getListStatuses(['list_id' => '1296500355958743045', 'count' => 10, 'format' => 'array', 'include_rts'=> false]);
 
         $perfilesxeneizes = Perfilesxeneize::all();
         return view('archive')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
@@ -36,12 +36,12 @@ class PageController extends Controller
         $news = News::latest()->paginate(20);
         $videos = Video::latest()->paginate(20);
         $perfilesxeneizes = Perfilesxeneize::latest()->paginate(12);
-        $twittes = Twitter::getUserTimeline(['screen_name' => 'deportesboca', 'count' => 10, 'format' => 'array']);
+        $twittes = Twitter::getListStatuses(['list_id' => '1296500355958743045', 'count' => 10, 'format' => 'array', 'include_rts'=> false]);
         return view('archivep')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
     }
     public function videoarchive(){
         $videos = Video::latest()->paginate(20);
-        $twittes = Twitter::getUserTimeline(['screen_name' => 'deportesboca', 'count' => 10, 'format' => 'array']);
+        $twittes = Twitter::getListStatuses(['list_id' => '1296500355958743045', 'count' => 10, 'format' => 'array', 'include_rts'=> false]);
         $perfilesxeneizes = Perfilesxeneize::all();
         return view('archivev')->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withTwittes($twittes);
     }
