@@ -413,23 +413,23 @@
     background: #323232;
 }
 .mega-menu .menu-mobile-collapse-trigger:after {
-    top: 27px;
+    top: 31px;
 }
 .mega-menu .menu-mobile-collapse-trigger span {
-    top: 20px;
+    top: 22px;
 }
 .mega-menu .menu-mobile-collapse-trigger.active span {
     opacity: 0;
 }
 .mega-menu .menu-mobile-collapse-trigger.active:before {
-    -webkit-transform: rotate(30deg);
-    -ms-transform: rotate(30deg);
-    transform: rotate(30deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .mega-menu .menu-mobile-collapse-trigger.active:after {
-    -webkit-transform: rotate(-30deg);
-    -ms-transform: rotate(-30deg);
-    transform: rotate(-30deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 @media screen and (max-width:991px) {
