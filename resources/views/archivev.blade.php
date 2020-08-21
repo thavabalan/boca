@@ -22,7 +22,7 @@
       
       
       
-    <section class="news px-3 noticias" style="
+    <section class="news px-3 noticias videos" style="
       padding-top: 9em;
   ">
       <div class="container-fluid ">

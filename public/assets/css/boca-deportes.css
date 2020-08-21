@@ -933,6 +933,9 @@ a.googleplus:hover, a.googleplus:focus {
     position: relative;
     transition: all ease .3s;
 }
+.videos .news .card-body {
+    height: 100px;
+}
 .news .card-body h5, .news .card-body p {
     overflow: hidden;
     display: -webkit-box;
