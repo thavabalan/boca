@@ -40,7 +40,7 @@
     transition-delay: .5s;
 	  position:absolute;
 }
-@media screen and (min-width:992px)
+@media screen and (max-width:991px)
 {
   .mega-menu .menu-bar{
 	  position:relative;
