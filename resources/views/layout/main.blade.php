@@ -35,10 +35,16 @@
     left: 0;
 }
 .mega-menu .menu-bar{
-	right: 0;
+	  right: 0;
     transition: all .5s ease;
     transition-delay: .5s;
-	position:absolute;
+	  position:absolute;
+}
+@media screen and (min-width:992px)
+{
+  .mega-menu .menu-bar{
+	  position:relative;
+  }
 }
 .mega-menu.intro .menu-bar{
     right: -600px;
