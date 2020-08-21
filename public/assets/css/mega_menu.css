@@ -395,7 +395,7 @@
     width: 26px;
     background: #f1b03a;
     position: absolute;
-    top: 13px;
+    top: 10px;
     border-radius: 3px;
     left: 0;
     right: 0;
@@ -413,10 +413,10 @@
     background: #323232;
 }
 .mega-menu .menu-mobile-collapse-trigger:after {
-    top: 31px;
+    top: 28px;
 }
 .mega-menu .menu-mobile-collapse-trigger span {
-    top: 22px;
+    top: 19px;
 }
 .mega-menu .menu-mobile-collapse-trigger.active span {
     opacity: 0;
