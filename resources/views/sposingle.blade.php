@@ -75,7 +75,7 @@
                 <div class="card-body">
                   <h6 class=""> {{$news->lead}} </h6>
                   <h5 class="card-title"><a href="{{url('/noticias')}}/{{$news->slug}}">{{$news->title}}</a></h5>
-                  <p class="card-text">{{$item->excerpt}}</p>
+                  <p class="card-text">{{$news->excerpt}}</p>
                  <a class="more-news" href="{{url('/noticias')}}/{{$news->slug}}">Ver más..</a> </div>
               </div>
             </div>
