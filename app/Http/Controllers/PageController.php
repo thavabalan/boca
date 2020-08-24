@@ -66,8 +66,8 @@ class PageController extends Controller
         return view('sposingle')->withSport($sport)->withNewses($newses)->withVideos($videos);
     }
     public function singlevideo($id){
-        $news = Video::latest()->find($id);
-        $newses = Video::latest()->paginate(20);
+        $video = Video::latest()->find($id);
+        $videos = Video::latest()->paginate(20);
 
         return view('videosingle')->withNews($news)->withNewses($newses);
     }

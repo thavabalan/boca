@@ -6,7 +6,7 @@
 	
 	
     <section class="page-banner">
-    <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($news->image)}}');"></div>
+    <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($video->image)}}');"></div>
     </section>
       
       
@@ -22,10 +22,10 @@
         <div class="container mb-5">
           <div class="row">
             <div class="col-md-12">
-              <h6 class="mt-5">{{$news->created_at->format('d-m-y')}}</h6>
-            <h2 class="">{{$news->title}}</h2>
+              <h6 class="mt-5">{{$video->created_at->format('d-m-y')}}</h6>
+            <h2 class="">{{$video->title}}</h2>
             <div class="video-responsive">
-              {!!$news->embed_code!!}
+              {!!$video->embed_code!!}
 </div>
             </div>
           </div>
@@ -35,32 +35,34 @@
       
       
       
-    <div class="row ">
-      <div class="col-md-12 noticias videos news">
-        <div class="container mb-5">
-          <div class="mt-3 mb-4">
-            <h2>Videos</h2>
-          </div>
-          <div class="row flex">
-              @foreach($newses as $item)
-            <div class="col-md-4 content">
-              <div class="news-item">
-              <div class="bg-white card aaSadow border-0"> <span class="ply-btn medium"><i class="fa fa-play"></i></span> <a href="{{url('/videos')}}/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt=""> </a>
-                  <div class="card-body">
-                    <h6 class=""> {{$item->lead}} </h6>
-                    <h5 class="card-title"><a href="{{url('/videos')}}/{{$item->id}}">{{$item->title}}</a></h5>
-                    <p class="card-text">{{$item->excerpt}}</p>
-                    <!--<small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small> --><a class="more-news" href="{{url('/noticias')}}/{{$item->id}}">Ver más..</a> </div>
-                </div>
-              </div>
-            </div>
-            @endforeach
-            <div class="clearfix"></div>
-            <div class="col-md-12 text-center mt-3"> <a href="{{url('/videos')}}" class="btn-outline-boca" id="loadMore">Más Videos</a> </div>
-          </div>
+    <section class="features videos">
+      <div class="col-md-12">
+        <div class="mt-2 mb-3">
+          <h2>Videos</h2>
         </div>
       </div>
-    </div>
+      <div class="owl-carousel owl-theme" id="videos" >
+        @foreach($videos->slice(0, 6) as $video)
+        <a data-lity href="#inline{{$video->id}}">
+        <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$video->image}}" alt="">
+          <div class="card-body text-center"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>
+            <h1>{{$video->title}}</h1>
+            <h3>{{$video->sub_title}}</h3>
+          </div>
+        </div>
+        </a> 
+       
+        @endforeach
+       </div>
+      <div class="col-md-12 videos-bottom"> <a href="/videos" class="btn-outline-boca-amarillo">Ir a la playlist</a> </div>
+      </div>
+    </section>
+    @foreach($videos as $video)
+      
+  <div id="inline{{$video->id}}"  style="overflow:auto;background:#FDFDF6;padding:20px;width:600px;max-width:100%;border-radius:6px" class="lity-hide">
+      {!!$video->embed_code!!}
+  </div>
+  @endforeach
   </main>
 
 @endsection
