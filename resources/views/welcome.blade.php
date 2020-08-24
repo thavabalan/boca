@@ -46,9 +46,10 @@
       
     <section class="container my-5 bienvenido text-center">
       <h1 class="pb-3">BOCA apuesta al futuro.</h1>
-      <h2 class="pb-5">Conocé más sobre nuestros Deportes Amateurs, <br>
-        y sus futuros campeones.</h2>
-      <a href="" class="btn-outline-boca">Conocé más</a>
+      <h2 class="pb-5">Los Deportes Amateur,<br>
+un espacio de desarrollo con contención <br>
+y un camino a la competencia de élite</h2>
+      <a href="/noticias/boca-deportes-amateur-tu-club" class="btn-outline-boca">Conocé más</a>
     </section>
       
     @if(Session::has('success'))

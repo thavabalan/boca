@@ -39,7 +39,7 @@
             {!!$sport->block4!!}          </div>
         </div>
       </div>
-      <section class="">
+      <!-- <section class="">
         <div class="row mx-15">
           <div class="col-md-12 px-0">
             <section id="video-over" class="text-center" style="background-image: url('{{Voyager::image($sport->featured_image)}}');">
@@ -53,7 +53,7 @@
       </section>
       <div id="inline"  style="overflow:auto;background:#FDFDF6;padding:20px;width:600px;max-width:100%;border-radius:6px" class="lity-hide">
         {!!$sport->embed_code!!}
-    </div>
+    </div> -->
     </div>
   </div>
 	
@@ -75,8 +75,8 @@
                 <div class="card-body">
                   <h6 class=""> {{$news->lead}} </h6>
                   <h5 class="card-title"><a href="{{url('/noticias')}}/{{$news->slug}}">{{$news->title}}</a></h5>
-                  <p class="card-text">{!! Str::limit($news->body, 30) !!}</p>
-                  <!--<small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$news->created_at->format('d F Y')}} </small>--> <a class="more-news" href="{{url('/noticias')}}/{{$news->slug}}">Ver más..</a> </div>
+                  <p class="card-text">{{$item->excerpt}}</p>
+                 <a class="more-news" href="{{url('/noticias')}}/{{$news->slug}}">Ver más..</a> </div>
               </div>
             </div>
             @endforeach
