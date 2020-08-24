@@ -63,20 +63,23 @@
           <h2>Videos</h2>
         </div>
       </div>
-      <div class="owl-carousel owl-theme owl-loaded owl-drag" id="videos">       <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-3296px, 0px, 0px); transition: all 0.25s ease 0s; width: 10688px; padding-left: 400px; padding-right: 400px;">
-        @foreach($videos as $video)
-        <div class="owl-item cloned" style="width: 824px;"><a data-lity="" href="https://www.youtube.com/embed/{{$video->video_id}}">
+      <div class="owl-carousel owl-theme" id="videos" >
+        @foreach($videos->slice(0, 6) as $video)
+        <a data-lity href="#inline{{$video->id}}">
         <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$video->image}}" alt="">
           <div class="card-body text-center"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>
             <h1>{{$video->title}}</h1>
-            <h3>Superclásico</h3>
+            <h3>{{$video->sub_title}}</h3>
           </div>
         </div>
-        </a></div>
+        </a> 
+       
         @endforeach
-   </div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-chevron-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fa fa-chevron-right"></i></button></div><div class="owl-dots disabled"></div></div>
-      <div class="col-md-12 videos-bottom"> <a href="http://localhost/boca/" class="btn-outline-boca-amarillo">Ir a la playlist</a> </div>
+       </div>
+      <div class="col-md-12 videos-bottom"> <a href="/videos" class="btn-outline-boca-amarillo">Ir a la playlist</a> </div>
+      </div>
     </section>
+    @foreach($videos as $video)
       
       
       
