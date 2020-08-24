@@ -81,6 +81,10 @@
     </section>
     @foreach($videos as $video)
       
+  <div id="inline{{$video->id}}"  style="overflow:auto;background:#FDFDF6;padding:20px;width:600px;max-width:100%;border-radius:6px" class="lity-hide">
+      {!!$video->embed_code!!}
+  </div>
+  @endforeach
       
       
     <section class="news px-3 rss">
