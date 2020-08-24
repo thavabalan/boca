@@ -115,7 +115,7 @@ y un camino a la competencia de élite</h2>
         </div>
       </div>
       <div class="owl-carousel owl-theme" id="videos" >
-        @foreach($videos->slice(0, 6) as $video)
+        @foreach($videos->slice(0, 3) as $video)
         <a data-lity href="#inline{{$video->id}}">
         <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$video->image}}" alt="">
           <div class="card-body text-center"> <span class="ply-btn medium"><i class="fa fa-play"></i></span>
@@ -182,7 +182,7 @@ y un camino a la competencia de élite</h2>
           </div>
           <div class="col-md-12 col-lg-12" >
             <div class="row">
-              @foreach($perfilesxeneizes as $item)
+              @foreach($perfilesxeneizes->slice(0,3) as $item)
               <div class="col-md-4"> <a href="perfiles/{{$item->slug}}">
                 <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
                   <div class="card-body">
