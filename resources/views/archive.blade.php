@@ -129,7 +129,7 @@
           </div>
           <div class="col-md-12 col-lg-12">
             <div class="row">
-                @foreach($perfilesxeneizes as $item)
+                @foreach($perfilesxeneizes->slice(0,3) as $item)
 
               <div class="col-md-4"> <a href="{{url('/perfiles')}}/{{$item->slug}}">
                 <div class="card"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->image}}" alt="">
