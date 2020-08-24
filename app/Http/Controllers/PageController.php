@@ -69,6 +69,6 @@ class PageController extends Controller
         $video = Video::latest()->find($id);
         $videos = Video::latest()->paginate(20);
 
-        return view('videosingle')->withNews($news)->withNewses($newses);
+        return view('videosingle')->withVideo($video)->withVideos($videos);
     }
 }
