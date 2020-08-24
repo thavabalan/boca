@@ -1,10 +1,6 @@
 @extends('layout.main')
 @section('content')
-<style>
-  .videos{
-    bacground:white;
-  }
-  </style>
+
 <main role="main">
 	
 	
@@ -40,7 +36,7 @@
       
       
     <div class="row ">
-      <div class="col-md-12 noticias videos">
+      <div class="col-md-12 noticias videos news">
         <div class="container mb-5">
           <div class="mt-3 mb-4">
             <h2>Videos</h2>
