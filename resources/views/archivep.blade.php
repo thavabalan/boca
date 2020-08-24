@@ -112,7 +112,7 @@
       
       
       
-    <section class="media media-title pb-5 perfiles">
+    <!-- <section class="media media-title pb-5 news">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -139,8 +139,35 @@
         </div>
       </div>
     </section>
-      
-      
+       -->
+       <section class="news px-3 noticias">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="mt-3 mb-4">
+            <h2>Noticias</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme " id="noticias">
+            @foreach($newses as $news)
+            <div class=" news-item ">
+              <div class="bg-white card aaSadow border-0"> <a href=""> <img class="card-img-top" src="{{Voyager::image($news->top_image)}}" alt=""> </a>
+                <div class="card-body">
+                  <h6 class=""> {{$news->lead}} </h6>
+                  <h5 class="card-title"><a href="{{url('/noticias')}}/{{$news->slug}}">{{$news->title}}</a></h5>
+                  <p class="card-text">{{$news->excerpt}}</p>
+                 <a class="more-news" href="{{url('/noticias')}}/{{$news->slug}}">Ver más..</a> </div>
+              </div>
+            </div>
+            @endforeach
+           
+          </div>
+        </div>
+        <div class="col-md-12 text-center"> <a href="{{url('/noticias')}}" class="btn-outline-boca">Más noticias</a> </div>
+      </div>
+    </div>
+  </section>
       
    
       
