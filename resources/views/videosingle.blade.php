@@ -1,6 +1,10 @@
 @extends('layout.main')
 @section('content')
-
+<style>
+  .videos{
+    bacground:white;
+  }
+  </style>
 <main role="main">
 	
 	
