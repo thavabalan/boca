@@ -150,14 +150,14 @@
         </div>
         <div class="col-md-12">
           <div class="owl-carousel owl-theme " id="noticias">
-            @foreach($newses as $news)
+            @foreach($news as $item)
             <div class=" news-item ">
-              <div class="bg-white card aaSadow border-0"> <a href=""> <img class="card-img-top" src="{{Voyager::image($news->top_image)}}" alt=""> </a>
+              <div class="bg-white card aaSadow border-0"> <a href=""> <img class="card-img-top" src="{{Voyager::image($item->top_image)}}" alt=""> </a>
                 <div class="card-body">
-                  <h6 class=""> {{$news->lead}} </h6>
-                  <h5 class="card-title"><a href="{{url('/noticias')}}/{{$news->slug}}">{{$news->title}}</a></h5>
-                  <p class="card-text">{{$news->excerpt}}</p>
-                 <a class="more-news" href="{{url('/noticias')}}/{{$news->slug}}">Ver más..</a> </div>
+                  <h6 class=""> {{$item->lead}} </h6>
+                  <h5 class="card-title"><a href="{{url('/noticias')}}/{{$item->slug}}">{{$item->title}}</a></h5>
+                  <p class="card-text">{{$item->excerpt}}</p>
+                 <a class="more-news" href="{{url('/noticias')}}/{{$item->slug}}">Ver más..</a> </div>
               </div>
             </div>
             @endforeach
