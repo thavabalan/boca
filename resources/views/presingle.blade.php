@@ -3,10 +3,9 @@
 
 <main role="main">
 	
-	<?php var_dump($news); ?>
+	
 	
     <section class="page-banner">
-    
     <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($news->image)}}');"></div>
     </section>
       
