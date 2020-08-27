@@ -3,7 +3,7 @@
 
 <main role="main">
 	
-	
+	var_dump($news);
 	
     <section class="page-banner">
     @if ($news->cover_photo)
