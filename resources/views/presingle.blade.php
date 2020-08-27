@@ -6,7 +6,7 @@
 	
 	
     <section class="page-banner">
-    <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($news->image)}}');"></div>
+    <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($news->cover_photo)?Voyager::image($news->cover_photo):Voyager::image($news->image)}}');"></div>
     </section>
       
       
