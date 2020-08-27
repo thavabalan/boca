@@ -6,7 +6,12 @@
 	
 	
     <section class="page-banner">
+    @if ($news->cover_photo)
+    <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($news->cover_photo)}}');"></div>
+    @else
     <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($news->image)}}');"></div>
+    @endif
+    <!-- <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($news->image)}}');"></div> -->
     </section>
       
       
