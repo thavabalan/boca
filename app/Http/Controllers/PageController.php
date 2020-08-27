@@ -18,7 +18,7 @@ class PageController extends Controller
         $news = News::all();
         $videos = Video::all();
         $perfilesxeneizes = Perfilesxeneize::all();
-        $sports = Sport::all()->sortBy('created_at', 'desc');
+        $sports = Sport::all()->sortBy('created_at', [], true);
         $momentos = Momento::all();
         $twittes = Twitter::getListStatuses(['list_id' => '1296500355958743045', 'count' => 10, 'format' => 'array', 'include_rts'=> false]);
         return view('welcome')->withNews($news)->withVideos($videos)->withPerfilesxeneizes($perfilesxeneizes)->withSports($sports)->withMomentos($momentos)->withTwittes($twittes);
