@@ -280,7 +280,7 @@
     height: 85%;
 }
 
-.deportes .owl-next .fa, .momentos .owl-prev .fa {
+.deportes .owl-next .fa, .deportes .owl-prev .fa {
     width: 50px;
     text-align: center;
     height: 50px;
@@ -288,11 +288,11 @@
     background: #07358b !important;
     color: #f1b03a
 }
-.deportes .owl-next .fa:hover, .momentos .owl-prev .fa:hover {
+.deportes .owl-next .fa:hover, .deportes .owl-prev .fa:hover {
     background: #f1b03a !important;
     color: #07358b
 }
-.deportes .owl-carousel .owl-nav button.owl-next, .momentos .owl-carousel .owl-nav button.owl-prev {
+.deportes .owl-carousel .owl-nav button.owl-next, .deportes .owl-carousel .owl-nav button.owl-prev {
     height: 85%;
 }
 
