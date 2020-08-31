@@ -113,7 +113,7 @@ $(document).ready(function () {
 		autoplayHoverPause: true,
 		items: 1,
 		responsiveClass: true,
-		nav: false,
+		nav: true,
 		dots: true,
 		autowidth: true,
 		navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
