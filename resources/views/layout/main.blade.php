@@ -11,10 +11,6 @@
 	
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-<!-- Menu -->
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/mega_menu.css')}}" />
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}" />
-<!-- Menu -->
 <link rel="stylesheet" href="{{asset('/assets/css/all.min.css')}}" />
 <link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}" />
 <link rel="stylesheet" href="{{asset('/assets/css/animate.css')}}" />
@@ -24,6 +20,10 @@
 <link rel="stylesheet" href="{{asset('/assets/css/style.css')}}" />
 <link rel="stylesheet" href="{{asset('/assets/css/lity.css')}}" />
 
+<!-- Menu -->
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/mega_menu.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}" />
+<!-- Menu -->
 
 <style>
 .intro #videoCover{
