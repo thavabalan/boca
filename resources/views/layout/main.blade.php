@@ -111,7 +111,7 @@ left:0;
                 <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/#home">Home</a> </li>
                 <li class="menu-item-parent"> <a href="/#deportes1">Deportes <i class="fa fa-angle-down fa-indicator"></i></a> 
                 <!-- drop down -->
-                <div class="drop-down grid-col-12">
+                <div class="drop-down grid-col-12 menu-deportes">
                     <!--grid row-->
                     <div class="grid-row">
                     @foreach($sports as $sport)

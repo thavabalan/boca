@@ -486,6 +486,25 @@ br {
     background-color: #07358b !important;
 }
 
+.mega-menu .drop-down, .mega-menu .drop-down-tab-bar{
+    background: #07358b;
+}
+.mega-menu .drop-down *, .mega-menu .drop-down-tab-bar *{
+    color: #f1b03a;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    font-style: italic;
+}
+.mega-menu .drop-down a:hover, .mega-menu .drop-down-tab-bar a:hover{
+    color: #f1b03a;
+
+}
+.menu-deportes{
+    left:auto !important;
+    right: 0;
+    width: 90vw;
+}
+
  
 
 
