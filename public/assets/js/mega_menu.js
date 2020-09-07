@@ -299,7 +299,8 @@
                     var $window = $(window),
                         scrollFlag = true,
                         scrollFlagMobile = true,
-                        logoHeight = $('.menu-logo').outerHeight();
+                        //logoHeight = $('.menu-logo').outerHeight();
+                        logoHeight=100;
                         if(!$('#header').hasClass('logo-center')){  
                             $('.mega-menu .menu-list-items').height(logoHeight);
                         }
