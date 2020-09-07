@@ -109,7 +109,19 @@ left:0;
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
                 <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/#home">Home</a> </li>
-                <li class="menu-item-parent"> <a href="/#deportes1">Deportes</a> </li>
+                <li class="menu-item-parent"> <a href="/#deportes1">Deportes</a> 
+                <!-- drop down -->
+                <div class="drop-down grid-col-12 grid-demo offset-3-vertical">
+                    <!--grid row-->
+                    <div class="grid-row">
+                    @foreach($sports as $sport)
+                        <div class="grid-col-4"><span>{{$sport->title}}</span></div>
+                        @endforeach
+
+                    </div>
+
+                </div>
+              </li>
                 <li class="menu-item-parent {{ Request::is('noticias') ? 'active' : '' }}"> <a href="{{ url('/noticias' )}}">Noticias</a> </li>
               <li class="menu-item-parent {{ Request::is('videos') ? 'active' : '' }}"> <a href="/videos">Videos</a> </li>
                 <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
