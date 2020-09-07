@@ -21,7 +21,7 @@ class ContactUsFormController extends Controller
 
         ), function($message) use ($request){
             $message->from($request->email);
-            $message->to('deportesamateurs@bocajuniors.com.ar', 'Admin')->subject($request->get('subject'));
+            $message->to('clubatletico@bocajuniors.com.ar', 'Admin')->subject($request->get('subject'));
         });
 
         return back()->with('success', 'Recibimos su consulta, gracias por contactarse.');
@@ -39,8 +39,8 @@ class ContactUsFormController extends Controller
             
 
         ), function($message) use ($request){
-            $message->from('deportesamateurs@bocajuniors.com.ar');
-            $message->to('deportesamateurs@bocajuniors.com.ar', 'Admin')->subject($request->get('number'));
+            $message->from('clubatletico@bocajuniors.com.ar');
+            $message->to('clubatletico@bocajuniors.com.ar', 'Admin')->subject($request->get('number'));
         });
 
         return back()->with('success', 'Recibimos su consulta, gracias por contactarse.');
