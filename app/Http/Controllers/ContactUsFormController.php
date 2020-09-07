@@ -20,7 +20,7 @@ class ContactUsFormController extends Controller
            
 
         ), function($message) use ($request){
-            $message->from($request->email);
+            $message->from('clubatletico@bocajuniors.com.ar');
             $message->to('clubatletico@bocajuniors.com.ar', 'Admin')->subject($request->get('subject'));
         });
 
