@@ -109,13 +109,13 @@ left:0;
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
                 <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/#home">Home</a> </li>
-                <li class="menu-item-parent"> <a href="/#deportes1">Deportes</a> 
+                <li class="menu-item-parent"> <a href="/#deportes1">Deportes <i class="fa fa-angle-down fa-indicator"></i></a> 
                 <!-- drop down -->
                 <div class="drop-down grid-col-12 grid-demo offset-3-vertical">
                     <!--grid row-->
                     <div class="grid-row">
                     @foreach($sports as $sport)
-                        <div class="grid-col-4"><span>{{$sport->title}}</span></div>
+                        <div class="grid-col-4"><a href="/spo/{{$sport->id}}"><span>{{$sport->title}}</span></a></div>
                         @endforeach
 
                     </div>
