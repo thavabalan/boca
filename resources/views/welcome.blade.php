@@ -26,7 +26,7 @@
     <section class="intro-video intro">
 	<div id="playCTA"><span class="play-text">Un club atletico</span> <span class="ply-btn medium"><i class="fa fa-play"></i></span></div>
       <div class="videoContainer">
-        <img id="videoCover" src="{{asset('storage/play.jpg');}}"/>
+        <img id="videoCover" src="{{asset('storage/play.jpg')}}"/>
 	<video playsinline id="homevideo">
           <source src="https://content.jwplatform.com/videos/sVzKg4Ti-AuTjtEnY.mp4" type="video/mp4">
         </video>
