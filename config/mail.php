@@ -38,11 +38,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.office365.com'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('NHCJ8Yh!nX(S}Js'),
+            'host' => 'smtp.office365.com',//env('MAIL_HOST', 'smtp.office365.com'),
+            'port' => '587', //env('MAIL_PORT', 587),
+            'encryption' => 'tls',//env('MAIL_ENCRYPTION', 'tls'),
+            'username' => 'clubatletico@bocajuniors.com.ar',//env('MAIL_USERNAME'),
+            'password' => 'NHCJ8Yh!nX(S}Js', //env('NHCJ8Yh!nX(S}Js'),
             'timeout' => null,
             'auth_mode' => null,
         ],
