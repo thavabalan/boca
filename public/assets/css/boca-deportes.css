@@ -509,7 +509,10 @@ br {
 }
 @media screen and (max-width: 991px)
 {
-
+    .mega-menu .menu-links > li > a
+    {
+        position: relative !important;
+    }    
     .mega-menu .menu-links > li > a i.fa.fa-indicator{
         right: -20px !important;
     }
