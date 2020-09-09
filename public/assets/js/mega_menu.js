@@ -177,6 +177,7 @@
                     $this.find(dropDown).prev($a).append('<div class="mobileTriggerButton"></div>');
                     // add the click trigger on mobile trigger div
                     $this.find(mobile_dropDown_trigger).on('click', function () {
+                        console.log('mobile trigger clicked')
                         // variables
                         var elem = $(this),
                             parents = elem.parents($a),
