@@ -108,7 +108,7 @@ left:0;
             </ul>
             <div id="nav_divMainMenu" class="menu-bar">
               <ul class="menu-links" style="display: none;  overflow: auto;">
-                <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/#home">Home</a> </li>
+                <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/#home">Inicio</a> </li>
                 <li class="menu-item-parent"> <a href="/#deportes1">Deportes <i class="fa fa-angle-down fa-indicator"></i></a> 
                 <!-- drop down -->
                 <div class="drop-down grid-col-12 menu-deportes">
@@ -145,10 +145,8 @@ left:0;
 <footer class="footer-text">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-1 logo-footer"> <img src="{{asset('images/logo.png')}}"> </div>
+      <div class="col-md-1 logo-footer"> <img src="/storage/{{setting('site.logo')}}"> </div>
       <div class="col-md-7 text-center ">
-        <p><img src="{{asset('images/star.png')}}">&nbsp;www.deportesboca.com.ar </p>
-        &nbsp;&nbsp;&nbsp;&nbsp;
         <p><img src="{{asset('images/star.png')}}">&nbsp;Brandsen 805, Capital Federal</p>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <p>Vení a hacer deportes en Boca.</p>

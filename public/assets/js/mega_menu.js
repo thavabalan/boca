@@ -205,9 +205,9 @@
                         return false;
                     });
                     // stop icons click behaviour
-                    $this.find('i.fa.fa-indicator').on('click', function () {
-                        return false;
-                    });
+                    // $this.find('i.fa.fa-indicator').on('click', function () {
+                    //     return false;
+                    // });
                 },
                 // click trigger for desktop mode
                 click_trigger: function () {
