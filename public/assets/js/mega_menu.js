@@ -177,7 +177,6 @@
                     $this.find(dropDown).prev($a).append('<div class="mobileTriggerButton"></div>');
                     // add the click trigger on mobile trigger div
                     $this.find(mobile_dropDown_trigger).on('click', function () {
-                        console.log('mobile trigger clicked')
                         // variables
                         var elem = $(this),
                             parents = elem.parents($a),
@@ -206,9 +205,9 @@
                         return false;
                     });
                     // stop icons click behaviour
-                    // $this.find('i.fa.fa-indicator').on('click', function () {
-                    //     return false;
-                    // });
+                    $this.find('i.fa.fa-indicator').on('click', function () {
+                        return false;
+                    });
                 },
                 // click trigger for desktop mode
                 click_trigger: function () {

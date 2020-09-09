@@ -511,7 +511,11 @@ br {
 {
 
     .mega-menu .menu-links > li > a i.fa.fa-indicator{
-        right: -20px;
+        right: -20px !important;
+    }
+    .mega-menu .mobileTriggerButton{
+    left: -20px !important; 
+    right: -20px !important;
     }
 }
 
