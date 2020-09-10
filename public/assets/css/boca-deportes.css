@@ -507,6 +507,9 @@ br {
     right: 0 !important;
     width: 90vw !important;
 }
+.logo-footer img{
+    width:110px;
+}
 @media screen and (max-width: 991px)
 {
     .mega-menu .menu-links > li > a
