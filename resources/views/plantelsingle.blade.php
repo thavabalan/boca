@@ -20,9 +20,9 @@
     <div class="row ">
       <div class="col-md-12 noticias news">
         <div class="container mb-5">
-          <div class="mt-3 mb-4">
+          <!-- <div class="mt-3 mb-4">
             <h2>Plantel</h2>
-          </div>
+          </div> -->
           <div class="row flex">
               @foreach($players as $item)
             <div class="col-md-4 content">
