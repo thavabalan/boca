@@ -8,6 +8,7 @@ use App\Video;
 use App\Perfilesxeneize;
 use App\Sport;
 use App\Momento;
+use App\Player;
 use Twitter;
 use File;
 
