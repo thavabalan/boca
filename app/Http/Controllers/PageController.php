@@ -9,6 +9,7 @@ use App\Perfilesxeneize;
 use App\Sport;
 use App\Momento;
 use App\Player;
+use App\Team;
 use Twitter;
 use File;
 
@@ -62,9 +63,9 @@ class PageController extends Controller
         $sports = Sport::orderBy('title')->get();
         return view('presingle')->withNews($news)->withNewses($newses)->withSports($sports);
     }
-    public function plantelsingle($id){
+    public function plantelsingle($slug){
         $players = Player::where('team', $id)->orderBy('number')->get();
-        $sport = Sport::where('id', $id)->first();
+        $team = Team::where('slug', $slug)->first();
         $sports = Sport::orderBy('title')->get();
 
         return view('plantelsingle')->withPlayers($players)->withSport($sport)->withSports($sports);
