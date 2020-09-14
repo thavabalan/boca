@@ -69,7 +69,7 @@ class PageController extends Controller
         $players = Player::where('team', $team->id)->orderBy('number')->get();
         $sports = Sport::orderBy('title')->get();
 
-        return view('plantelsingle')->withPlayers($players)->withSport($sport)->withSports($sports);
+        return view('plantelsingle')->withPlayers($players)->withTeam($team)->withSports($sports);
     }
     public function singlesport($id){
         $sport = Sport::find($id);
