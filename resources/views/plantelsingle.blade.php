@@ -17,22 +17,6 @@
       
       
       
-    <!-- <div class="row noticias-interna">
-      <div class="col-md-12">
-        <div class="container mb-5">
-          <div class="row">
-            <div class="col-md-12">
-              <h6 class="mt-5">{{$news->created_at->format('d-m-y')}}</h6>
-            <h2 class="">{{$news->title}}</h2>
-              {!!$news->body!!}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-      
-      
-      
     <div class="row ">
       <div class="col-md-12 noticias news">
         <div class="container mb-5">
