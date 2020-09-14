@@ -1597,6 +1597,7 @@ a.back-to-top:hover {
 }
 .news .news-item.player .card-body{
     height: auto;
+    padding: 12px;
 }
 /*@media screen and (min-width: 1920px) {
     .container {
