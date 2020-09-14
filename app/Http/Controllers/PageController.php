@@ -63,8 +63,8 @@ class PageController extends Controller
         return view('presingle')->withNews($news)->withNewses($newses)->withSports($sports);
     }
     public function plantelsingle($id){
-        $players = Player::where('team', $id)->get();
-        $sport = Sport::where('id', $id)->get();
+        $players = Player::where('team', $id)->orderBy('number')->get();
+        $sport = Sport::where('id', $id)->first();
         return view('plantelsingle')->withPlayers($players)->withSport($sport);
     }
     public function singlesport($id){
