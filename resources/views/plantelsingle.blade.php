@@ -26,13 +26,14 @@
           <div class="row flex">
               @foreach($players as $item)
             <div class="col-md-4 content">
-              <div class="news-item">
-              <div class="bg-white card aaSadow border-0"> <a href="{{url('/noticias')}}/{{$item->slug}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->photo}}" alt=""> </a>
+              <div class="news-item player">
+              <div class="bg-white card aaSadow border-0"> <a href="#"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->photo}}" alt=""> </a>
                   <div class="card-body">
                     <h6 class=""> {{$item->position}} </h6>
-                    <h5 class="card-title"><a href="{{url('/noticias')}}/{{$item->slug}}">{{$item->name}}</a></h5>
+                    <h5 class="card-title"><a href="#">{{$item->number}}. {{$item->name}}</a></h5>
                     <!-- <p class="card-text">{{$item->excerpt}}</p> -->
-                    <!--<small class="text-muted"><i class="fas fa-calendar-alt mr-1 "></i>{{$item->created_at->format('d F Y')}} </small>--> <a class="more-news" href="{{url('/noticias')}}/{{$item->slug}}">Ver más..</a> </div>
+                    
+                    <small class="text-muted">Procedencia: {{$item->previous_teams}} </small> </div>
                 </div>
               </div>
             </div>

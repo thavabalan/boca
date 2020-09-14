@@ -1589,6 +1589,15 @@ a.back-to-top:hover {
 }
 }
 
+.news-item.player .card{
+    padding: 0;
+}
+.news-item.player>div>a{
+    padding-top: 80%;
+}
+.news .news-item.player .card-body{
+    height: auto;
+}
 /*@media screen and (min-width: 1920px) {
     .container {
         max-width: 1440px;
