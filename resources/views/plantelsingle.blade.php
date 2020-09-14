@@ -6,6 +6,7 @@
 	
 	
     <section class="page-banner">
+    <h1 class="team-title">{{$sport->title}}</h1>
     <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($sport->featured_image)}}');"></div>
     </section>
       

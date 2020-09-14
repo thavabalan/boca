@@ -1599,6 +1599,18 @@ a.back-to-top:hover {
     height: auto;
     padding: 12px;
 }
+.team-title{
+    align-self: center;
+    color: #f1b03a;
+    text-align: center;
+    transition: opacity ease 0.6s;
+    font-size: 100px;
+    font-style: italic;
+    letter-spacing: 20px;
+    position: absolute;
+    position: absolute;
+    align-self: center;
+}
 /*@media screen and (min-width: 1920px) {
     .container {
         max-width: 1440px;
