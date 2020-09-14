@@ -61,6 +61,10 @@ class PageController extends Controller
         $sports = Sport::orderBy('title')->get();
         return view('presingle')->withNews($news)->withNewses($newses)->withSports($sports);
     }
+    public function plantelsingle($id){
+        $players = Sport::where('team', $id);
+        return view('plantelsingle')->withPlayers($players);
+    }
     public function singlesport($id){
         $sport = Sport::find($id);
         $newses = News::latest()->paginate(20);
