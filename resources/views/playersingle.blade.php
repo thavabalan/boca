@@ -33,7 +33,7 @@
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Altura:</span><span>{{number_format($player->height/100,2)}}</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Peso:</span><span>{{$player->weight}}</span></p>
 
-    <button class="btn-outline-boca-amarillo" href="/planteles/{{$team->slug}}">Volver al plantel</button>
+    <a href="/planteles/{{$team->slug}}"><button class="btn-outline-boca-amarillo">Volver al plantel</button></a>
 </div><div class="col-md-6"><img class="card-img-top" src="{{asset('/storage')}}/{{$player->photo}}">
                           
                         
