@@ -27,10 +27,13 @@
           <div class="row flex ficha"><div class="col-md-6 detalle">
     <h1 class="nombre">{{player->name}}</h1>
     <h2 class="posicion"><span class="item">Posicion:</span> {{player->position}}</h2>
-    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento:</span><span>12 de octubre de 1973</span></p>
-    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento:</span><span>12 de octubre de 1973</span></p>
-    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento:</span><span>12 de octubre de 1973</span></p>
-    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento:</span><span>12 de octubre de 1973</span></p><button class="btn-outline-boca-amarillo" href="#sumate" data-lity="">Volver al plantel</button>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento: </span><span>{{$player->dob}}</span></p>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Lugar de Nacimiento: </span><span>{{$player->place_of_birth}}</span></p>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Nacionalidad: </span><span>{{$player->nationality}}</span></p>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Altura:</span><span>{{number_format($player->height/100,2)}}</span></p>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Peso:</span><span>{{$player->weight}}</span></p>
+
+    <button class="btn-outline-boca-amarillo" href="#sumate" data-lity="">Volver al plantel</button>
 </div><div class="col-md-6"><img class="card-img-top" src="https://clubatletico.bocajuniors.com.ar/storage/players/September2020/wPtqwDjCXzPU0cYzOS4T.jpg">
                           
                         
