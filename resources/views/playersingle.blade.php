@@ -34,7 +34,7 @@
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Peso:</span><span>{{$player->weight}}</span></p>
 
     <button class="btn-outline-boca-amarillo" href="#sumate" data-lity="">Volver al plantel</button>
-</div><div class="col-md-6"><img class="card-img-top" src="https://clubatletico.bocajuniors.com.ar/storage/players/September2020/wPtqwDjCXzPU0cYzOS4T.jpg">
+</div><div class="col-md-6"><img class="card-img-top" src="{{asset('/storage')}}/{{$player->photo}}">
                           
                         
                         
