@@ -71,10 +71,10 @@ class PageController extends Controller
 
         return view('plantelsingle')->withPlayers($players)->withTeam($team)->withSports($sports);
     }
-    public function deportistasingle($plantelSlug,$deportistaSlug){
+    public function deportistasingle($plantelSlug,$deportistaSlug,$id){
         
         $team = Team::where('slug', $plantelSlug)->first();
-        $player = Player::where('team', $team->id)->where('slug', $deportistaSlug)->first();
+        $player = Player::where('id', $id)->first();
         $sports = Sport::orderBy('title')->get();
 
         return view('playersingle')->withPlayer($player)->withTeam($team)->withSports($sports);
