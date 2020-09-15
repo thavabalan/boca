@@ -23,7 +23,7 @@ Route::get('/noticias/{slug}','PageController@singlenews')->name('news');
 Route::get('/perfiles/{slug}','PageController@singlepref');
 Route::get('/videos/{id}','PageController@singlevideo');
 Route::get('/spo/{id}','PageController@singlesport');
-Route::get('/planteles/{slug}/','PageController@plantelsingle');
+Route::get('/planteles/{slug}','PageController@plantelsingle');
 Route::get('/planteles/{plantelSlug}/{deportistaSlug}/{id}','PageController@deportistasingle');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
