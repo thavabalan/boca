@@ -72,7 +72,7 @@ class PageController extends Controller
         return view('plantelsingle')->withPlayers($players)->withTeam($team)->withSports($sports);
     }
     public function deportistasingle($plantelSlug,$deportistaSlug,$id){
-        
+        var_dump($id);
         $team = Team::where('slug', $plantelSlug)->first();
         $player = Player::where('id', $id)->first();
         var_dump($player);
