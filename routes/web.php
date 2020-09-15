@@ -24,7 +24,7 @@ Route::get('/perfiles/{slug}','PageController@singlepref');
 Route::get('/videos/{id}','PageController@singlevideo');
 Route::get('/spo/{id}','PageController@singlesport');
 Route::get('/planteles/{slug}','PageController@plantelsingle');
-Route::get('/deportistas/{plantelSlug}/{deportistaSlug}-d{id}','PageController@deportistasingle');
+Route::get('/deportistas/{plantelSlug}/{deportistaSlug}/{id}','PageController@deportistasingle');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
