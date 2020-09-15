@@ -28,7 +28,7 @@
               @foreach($players as $item)
             <div class="col-md-4 content">
               <div class="news-item player">
-              <div class="bg-white card aaSadow border-0"> <a href="/deportistas/{{$team->slug}}/{{$item->slug}}-{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->photo}}" alt=""> </a>
+              <div class="bg-white card aaSadow border-0"> <a href="/deportistas/{{$team->slug}}/{{$item->slug}}-d{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->photo}}" alt=""> </a>
                   <div class="card-body">
                     <h6 class=""> {{$item->position}} </h6>
                     <h5 class="card-title"><a href="#">{{$item->number}}. {{$item->name}}</a></h5>
