@@ -1654,6 +1654,11 @@ a.back-to-top:hover {
 .ficha .detalle > h2, .ficha .detalle > h1 {
     padding-bottom: 20px;
 }
+@media (max-width:767px) {
+    .ficha{
+        flex-direction: column-reverse;
+    }
+    }
 /*@media screen and (min-width: 1920px) {
     .container {
         max-width: 1440px;
