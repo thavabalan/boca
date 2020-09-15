@@ -1614,6 +1614,46 @@ a.back-to-top:hover {
     transform: translateX(-50%) translateY(-50%);
     z-index: 2;
 }
+
+.ficha>div {
+    padding: 0;
+}
+
+.ficha .detalle {
+    background: #1c358a;
+    padding: 20px;
+}
+
+.ficha .detalle * {
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    font-style: italic;
+}
+
+.ficha .detalle .nombre {
+    text-align: center;
+    font-size: 40px;
+}
+
+.ficha .detalle p>span.item {
+    font-weight: 400;
+}
+
+.ficha .detalle .posicion {
+    font-size: 30px;
+    text-align: left;
+}
+
+.ficha .detalle span.item {
+    color: #f1b039;
+}
+
+.ficha .detalle > p {
+    padding-bottom: 30px;
+}
+.ficha .detalle > h2, .ficha .detalle > h1 {
+    padding-bottom: 20px;
+}
 /*@media screen and (min-width: 1920px) {
     .container {
         max-width: 1440px;

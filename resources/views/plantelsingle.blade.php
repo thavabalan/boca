@@ -6,7 +6,7 @@
 	
 	
     <section class="page-banner">
-    <h1 class="team-title">{{$team->title}}</h1>
+    <!-- <h1 class="team-title">{{$team->title}}</h1> -->
     <div class="banner-img banner-fade animated scaleOut" style="background-image: url('{{Voyager::image($team->featured_image)}}');"></div>
     </section>
       
@@ -21,9 +21,9 @@
     <div class="row ">
       <div class="col-md-12 noticias news">
         <div class="container mb-5">
-          <!-- <div class="mt-3 mb-4">
-            <h2>Plantel</h2>
-          </div> -->
+          <div class="mt-3 mb-4">
+            <h2>{{$team->title}}</h2>
+          </div>
           <div class="row flex">
               @foreach($players as $item)
             <div class="col-md-4 content">
