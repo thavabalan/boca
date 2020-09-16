@@ -30,8 +30,8 @@
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento: </span><span>{{$player->dob->format('j/n/Y')}}</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Lugar de Nacimiento: </span><span>{{$player->place_of_birth}}</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Nacionalidad: </span><span>{{$player->nationality}}</span></p>
-    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Altura: </span><span>{{number_format($player->height/100,2)}}</span></p>
-    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Peso: </span><span>{{$player->weight}}</span></p>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Altura: </span><span>{{number_format($player->height/100,2)}} m</span></p>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Peso: </span><span>{{$player->weight}} kg</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Debut: </span><span>{{$player->debut}}</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Procedencia: </span><span>{{$player->previous_teams}}</span></p>
 
