@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
-    
+    protected $dates = [
+        'dob',
+    ];
 }
