@@ -27,7 +27,7 @@
           <div class="row flex ficha"><div class="col-md-6 detalle">
     <h1 class="nombre">{{$player->name}}</h1>
     <h2 class="posicion"><span class="item">Posicion:</span> {{$player->position}}</h2>
-    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento: </span><span>{{if($player->dob)$player->dob->format('j/n/Y')}}</span></p>
+    <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Fecha de Nacimiento: </span><span>@if (isset($player->dob)) {{$player->dob->format('j/n/Y')}} @endif</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Lugar de Nacimiento: </span><span>{{$player->place_of_birth}}</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Nacionalidad: </span><span>{{$player->nationality}}</span></p>
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Altura: </span><span>{{number_format($player->height/100,2)}} m</span></p>
