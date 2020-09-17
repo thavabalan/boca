@@ -1659,6 +1659,10 @@ a.back-to-top:hover {
         flex-direction: column-reverse;
     }
     }
+    .intro .menu-list-items {
+        height: 56px !important;
+        margin-top: -10px !important;
+    }
 /*@media screen and (min-width: 1920px) {
     .container {
         max-width: 1440px;
