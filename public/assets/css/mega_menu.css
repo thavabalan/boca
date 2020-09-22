@@ -1576,9 +1576,9 @@
 .header.logo-center .mega-menu {
     min-height: 60px;
 }
-.mega-menu > section.menu-list-items {
+/* .mega-menu > section.menu-list-items {
     height: 60px !important;
-}
+} */
 .mega-menu .drop-down-multilevel {
     width: inherit;
 }
