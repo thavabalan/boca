@@ -26,7 +26,7 @@
           </div>
           <div class="row flex">
               @foreach($players as $item)
-            <div class="col-md-4 content">
+            <div class="col-md-4">
               <div class="news-item player">
               <div class="bg-white card aaSadow border-0"> <a href="/planteles/{{$team->slug}}/{{$item->slug}}/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->photo}}" alt=""> </a>
                   <div class="card-body">
