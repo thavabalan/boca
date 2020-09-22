@@ -68,7 +68,6 @@ class PageController extends Controller
         
         $team = Team::where('slug', $slug)->first();
         $players = DB::table('players')->where('team', $team->id)->orderBy('number')->get();
-        var_dump($players);
         $sports = Sport::orderBy('title')->get();
 
         return view('plantelsingle')->withPlayers($players)->withTeam($team)->withSports($sports);
