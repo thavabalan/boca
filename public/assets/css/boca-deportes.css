@@ -1992,7 +1992,7 @@ a.back-to-top:hover {
 }
 
 .mega-menu > section.menu-list-items {
-    height: 60px !important;
+    height: 60px;
 }
 @media (max-width:767px) {
     .ficha {
