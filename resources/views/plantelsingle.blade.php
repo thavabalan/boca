@@ -32,7 +32,6 @@
                   <div class="card-body">
                     <h6 class=""> {{$item->position}} </h6>
                     <h5 class="card-title"><a href="#">{{$item->number}}. {{$item->name}}</a></h5>
-                    <!-- <p class="card-text">{{$item->excerpt}}</p> -->
                     
                     <small class="text-muted">Procedencia: {{$item->previous_teams}} </small> </div>
                 </div>
