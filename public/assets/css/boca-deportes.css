@@ -1658,6 +1658,12 @@ a.back-to-top:hover {
     .ficha{
         flex-direction: column-reverse;
     }
+    .intro .menu-list-items{
+        height: 35px !important;
+    }
+    .intro .mega-menu{
+        min-height:40px !important;
+    }
     }
     .intro .menu-list-items {
         height: 56px !important;
