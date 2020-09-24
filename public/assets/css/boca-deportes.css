@@ -2014,6 +2014,9 @@ a.back-to-top:hover {
 .mega-menu .menu-logo{
     margin-top: -35px !important;
 }
+.mega-menu.intro .menu-logo{
+    margin-top: -25px !important;
+}
 
 @media (max-width: 1025px)
 {
