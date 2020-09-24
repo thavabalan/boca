@@ -47,7 +47,7 @@
   }
 }
 .mega-menu.intro .menu-bar{
-    right: -600px;
+    right: -650px;
 }
 .mega-menu.intro .menu-logo{
     left: calc(50% - 30px);
