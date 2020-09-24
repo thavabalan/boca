@@ -2011,11 +2011,17 @@ a.back-to-top:hover {
     }
     
 }
+.mega-menu .menu-logo{
+    margin-top: -35px !important;
+}
 
 @media (max-width: 1025px)
 {
     .mega-menu .menu-links > li > a {
         padding: 10px 8px !important;
+    }
+    .mega-menu .menu-logo{
+        margin-top: -25px !important;
     }
 }
 
