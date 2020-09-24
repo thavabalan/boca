@@ -1994,6 +1994,9 @@ a.back-to-top:hover {
 .mega-menu > section.menu-list-items {
     height: 60px;
 }
+.mega-menu .menu-links > li > a{
+    padding: .4rem 1rem !important;
+}
 @media (max-width:767px) {
     .ficha {
         flex-direction: column-reverse;
@@ -2009,6 +2012,12 @@ a.back-to-top:hover {
     
 }
 
+@media (max-width: 1025px)
+{
+    .mega-menu .menu-links > li > a {
+        padding: 10px 8px !important;
+    }
+}
 
 
 .intro .menu-list-items {

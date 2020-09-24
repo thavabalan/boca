@@ -300,7 +300,7 @@
                         scrollFlag = true,
                         scrollFlagMobile = true,
                         //logoHeight = $('.menu-logo').outerHeight();
-                        logoHeight=71;
+                        logoHeight=50;
                         if(!$('#header').hasClass('logo-center')){  
                             $('.mega-menu .menu-list-items').height(logoHeight);
                         }

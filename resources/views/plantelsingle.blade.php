@@ -31,7 +31,7 @@
               <div class="bg-white card aaSadow border-0"> <a href="/planteles/{{$team->slug}}/{{$item->slug}}/{{$item->id}}"> <img class="card-img-top" src="{{asset('/storage')}}/{{$item->photo}}" alt=""> </a>
                   <div class="card-body">
                     <h6 class=""> {{$item->position}} </h6>
-                    <h5 class="card-title"><a href="#">{{$item->number}}. {{$item->name}}</a></h5>
+                    <h5 class="card-title"><a href="/planteles/{{$team->slug}}/{{$item->slug}}/{{$item->id}}">{{$item->number}}. {{$item->name}}</a></h5>
                     
                     <small class="text-muted">Procedencia: {{$item->previous_teams}} </small> </div>
                 </div>
