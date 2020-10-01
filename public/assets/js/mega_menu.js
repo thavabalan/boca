@@ -287,6 +287,7 @@
                     // check if the top fixed true for desktop mode
                     if (settings.top_fixed === true) {
                         $this.addClass(desktopTopFixed);
+                        $this.parent('#top-navbar').addClass('topFixed');
                     }
                     // mobile mode top fixed
                     if (settings.mobile_settings.top_fixed) {
@@ -325,6 +326,7 @@
                                         $this.fadeOut(200, function () {
                                             // add class and fade in                                          
                                             $(this).addClass(desktopTopFixed);
+                                            $(this).parent('#top-navbar').addClass('topFixed');
                                             if(!$('#header').hasClass('logo-center')){
                                                  var logoHeight2 = $('.menu-logo img').outerHeight(true);
                                                  $('.mega-menu .menu-list-items').height(logoHeight2);
@@ -344,6 +346,8 @@
                                             }
                                             // add class and fade in
                                             $(this).removeClass(desktopTopFixed).fadeIn(200);
+                                            $(this).parent('#top-navbar').removeClass('topFixed');
+
                                         });
                                         // scroll flag true
                                         scrollFlag = true;

@@ -2017,6 +2017,11 @@ a.back-to-top:hover {
 .mega-menu.intro .menu-logo{
     margin-top: -25px !important;
 }
+.ficha .foto{
+    align-items: center;
+    display: flex;
+    background-color: #ddd;
+}
 
 @media (max-width: 1025px)
 {

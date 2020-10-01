@@ -36,7 +36,7 @@
     <p><img src="https://clubatletico.bocajuniors.com.ar/images/star.png"><span class="item">Procedencia: </span><span>{{$player->previous_teams}}</span></p>
 
     <a href="/planteles/{{$team->slug}}"><button class="btn-outline-boca-amarillo">Volver al plantel</button></a>
-</div><div class="col-md-6"><img class="card-img-top" src="{{asset('/storage')}}/{{$player->photo}}">
+</div><div class="col-md-6 foto"><img class="card-img-top" src="{{asset('/storage')}}/{{$player->photo}}">
                           
                         
                         
