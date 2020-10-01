@@ -2022,7 +2022,9 @@ a.back-to-top:hover {
     display: flex;
     background-color: #ddd;
 }
-
+.menu.topFixed{
+    top: 0;
+}
 @media (max-width: 1025px)
 {
     .mega-menu .menu-links > li > a {
