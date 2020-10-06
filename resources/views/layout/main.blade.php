@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es')}}">
+<html lang="es">
 <title>Boca Juniors</title>
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179365324-1')}}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179365324-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,21 +23,21 @@
   <meta name="msapplication-config" content="{{asset('/images/favicons/browserconfig.xml')}}">
   <link rel="shortcut icon" href="{{asset('/images/favicons/favicon.ico')}}">
   <link rel="manifest" href="{{asset('/images/favicons/manifest.json')}}">
-  <link rel="mask-icon" href="{{asset('/images/favicons/safari-pinned-tab.svg" color="#003391')}}">
-  <meta name="theme-color" content="#003391')}}">
+  <link rel="mask-icon" href="{{asset('/assets/images/favicons/safari-pinned-tab.svg')}}" color="#003391">
+  <meta name="theme-color" content="#003391">
   
-	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js')}}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet')}}">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet')}}">
-<link rel="stylesheet" href="{{asset('/css/all.min.css')}}" />
-<link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}" />
-<link rel="stylesheet" href="{{asset('/css/animate.css')}}" />
-<link rel="stylesheet" href="{{asset('/css/owl.carousel.min.css')}}" />
-<link rel="stylesheet" href="{{asset('/css/owl.theme.default.min.css')}}" />
-<link rel="stylesheet" href="{{asset('/css/boca-deportes.css')}}" />
-<link rel="stylesheet" href="{{asset('/css/style.css')}}" />
-<link rel="stylesheet" href="{{asset('/css/lity.css')}}" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{asset('/assets/css/all.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/animate.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/owl.carousel.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/owl.theme.default.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/boca-deportes.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/style.css')}}" />
+<link rel="stylesheet" href="{{asset('/assets/css/lity.css')}}" />
 
 <!-- Menu -->
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/mega_menu.css')}}" />
@@ -116,37 +116,37 @@ left:0;
 <body>
 	
 	
-<div id="top-navbar" class="menu')}}">
-  <nav id="menu" class="mega-menu {{ Request::is('/') ? 'intro' : '' }}')}}">
-    <section class="menu-list-items')}}">
-      <div class="container-fluid')}}">
-        <div class="row')}}">
-          <div class="col-lg-12 col-md-12')}}">
-            <ul class="menu-logo')}}">
-              <li> <a href="/#home')}}"><img id="logo_img" style="max-width:100px !important" src="/storage/{{setting('site.logo')}}" alt="logo')}}"> </a> </li>
+<div id="top-navbar" class="menu">
+  <nav id="menu" class="mega-menu {{ Request::is('/') ? 'intro' : '' }}">
+    <section class="menu-list-items">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <ul class="menu-logo">
+              <li> <a href="/#home"><img id="logo_img" style="max-width:100px !important" src="/storage/{{setting('site.logo')}}" alt="logo"> </a> </li>
             </ul>
-            <div id="nav_divMainMenu" class="menu-bar')}}">
-              <ul class="menu-links" style="display: none;  overflow: auto;')}}">
-                <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}')}}"> <a href="/#home')}}">Inicio</a> </li>
-                <li class="menu-item-parent')}}"> <a href="/#deportes1')}}">Deportes <i class="fa fa-angle-down fa-indicator')}}"></i></a> 
+            <div id="nav_divMainMenu" class="menu-bar">
+              <ul class="menu-links" style="display: none;  overflow: auto;">
+                <li class="menu-item-parent {{ Request::is('/') ? 'active' : '' }}"> <a href="/#home">Inicio</a> </li>
+                <li class="menu-item-parent"> <a href="/#deportes1">Deportes <i class="fa fa-angle-down fa-indicator"></i></a> 
                 <!-- drop down -->
-                <div class="drop-down grid-col-12 menu-deportes')}}">
+                <div class="drop-down grid-col-12 menu-deportes">
                     <!--grid row-->
-                    <div class="grid-row')}}">
+                    <div class="grid-row">
                     @foreach($sports as $sport)
-                        <div class="grid-col-4')}}"><a href="/spo/{{$sport->id}}')}}"><span>{{$sport->title}}</span></a></div>
+                        <div class="grid-col-4"><a href="/spo/{{$sport->id}}"><span>{{$sport->title}}</span></a></div>
                         @endforeach
 
                     </div>
 
                 </div>
               </li>
-                <li class="menu-item-parent {{ Request::is('noticias') ? 'active' : '' }}')}}"> <a href="{{ url('/noticias' )}}')}}">Noticias</a> </li>
-              <li class="menu-item-parent {{ Request::is('videos') ? 'active' : '' }}')}}"> <a href="/videos')}}">Videos</a> </li>
-                <!--<li class="menu-item-parent')}}"> <a href="')}}">Redes</a> </li>-->
-                <li class="menu-item-parent {{ Request::is('perfiles') ? 'active' : '' }}')}}"> <a href="{{route('perfiles')}}')}}">#Perfilesxeneixes</a> </li>
-                <li class="menu-item-parent')}}"> <a href="/#momentos1')}}">Momentos</a> </li>
-                <li class="menu-item-parent redes')}}"> <a class="twitter" target="_blank" href="https://twitter.com/deportesboca')}}"><i class="fab fa-twitter')}}"></i></a> </li>
+                <li class="menu-item-parent {{ Request::is('noticias') ? 'active' : '' }}"> <a href="{{ url('/noticias' )}}">Noticias</a> </li>
+              <li class="menu-item-parent {{ Request::is('videos') ? 'active' : '' }}"> <a href="/videos">Videos</a> </li>
+                <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
+                <li class="menu-item-parent {{ Request::is('perfiles') ? 'active' : '' }}"> <a href="{{route('perfiles')}}">#Perfilesxeneixes</a> </li>
+                <li class="menu-item-parent"> <a href="/#momentos1">Momentos</a> </li>
+                <li class="menu-item-parent redes"> <a class="twitter" target="_blank" href="https://twitter.com/deportesboca"><i class="fab fa-twitter"></i></a> </li>
               </ul>
             </div>
           </div>
@@ -161,26 +161,26 @@ left:0;
 @yield('content')	
 	
 	
-<footer class="footer-text')}}">
-  <div class="container-fluid')}}">
-    <div class="row')}}">
-      <div class="col-md-1 logo-footer')}}"> <img src="/storage/{{setting('site.logo')}}')}}"> </div>
-      <div class="col-md-7 text-center ')}}">
-        <p><img src="{{asset('images/star.png')}}')}}">&nbsp;Brandsen 805, Capital Federal</p>
+<footer class="footer-text">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1 logo-footer"> <img src="/storage/{{setting('site.logo')}}"> </div>
+      <div class="col-md-7 text-center ">
+        <p><img src="{{asset('images/star.png')}}">&nbsp;Brandsen 805, Capital Federal</p>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <p>Vení a hacer deportes en Boca.</p>
       </div>
-      <div class="col-md-2 text-center sumate')}}">
+      <div class="col-md-2 text-center sumate">
         <button class="btn-outline-boca-amarillo" href="#sumate" data-lity>Sumate!</button>
       </div>
-      <div class="col-md-2 text-center ')}}">
-        <ul class="list-unstyled socials')}}">
-          <li><a class="twitter" target="_blank" href="https://twitter.com/deportesboca')}}"><i class="fab fa-twitter')}}"></i></a></li>
+      <div class="col-md-2 text-center ">
+        <ul class="list-unstyled socials">
+          <li><a class="twitter" target="_blank" href="https://twitter.com/deportesboca"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
-      <div class="clearfix')}}"></div>
-      <div class="col-md-12 text-center copyright')}}">
-        <p class="')}}">© Copyright 2020 Boca Juniors</p>
+      <div class="clearfix"></div>
+      <div class="col-md-12 text-center copyright">
+        <p class="">© Copyright 2020 Boca Juniors</p>
       </div>
     </div>
   </div>
@@ -188,33 +188,33 @@ left:0;
 	
 	
 <!-- Sumate PopUP --> 
-<div id="sumate" class="lity-hide sumate-form')}}">
-  <h2 class="')}}">Sumate!</h2>
+<div id="sumate" class="lity-hide sumate-form">
+  <h2 class="">Sumate!</h2>
   <p>Completá tus datos</p>
-  <form action="{{ route('contact.store') }}" method="post')}}">
+  <form action="{{ route('contact.store') }}" method="post">
     @csrf
     <input name="nombre" placeholder="Nombre" type="text" tabindex="1" required >
     <input name="telefono" placeholder="Teléfono" type="text" tabindex="1" required >
     <input name="email" placeholder="Email" type="email" tabindex="2" required>
-    <button class="btn-outline-boca" name="submit" type="submit" data-submit="...Enviar" title="')}}">Enviar</button>
+    <button class="btn-outline-boca" name="submit" type="submit" data-submit="...Enviar" title="">Enviar</button>
   </form>
 </div>
 <!-- Sumate PopUP --> 
 	
 	
 	
-<a href="#" class="back-to-top" title="')}}"><i class="fa fa-chevron-up')}}"></i></a> 
+<a href="#" class="back-to-top" title=""><i class="fa fa-chevron-up"></i></a> 
 	
 	
 	
-<script src="{{asset('assets/js/jquery-3.5.0.min.js')}}')}}"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.min.js')}}')}}"></script> 
-<script src="{{asset('assets/js/wow.min.js')}}')}}"></script> 
-<script src="{{asset('assets/js/fontawesome.min.js')}}')}}"></script> 
-<script src="{{asset('assets/js/owl.carousel.min.js')}}')}}"></script> 
-<script src="{{asset('assets/js/boca-deportes.js')}}')}}"></script> 
-<script src="{{asset('assets/js/lity.js')}}')}}"></script> 
+<script src="{{asset('assets/js/jquery-3.5.0.min.js')}}"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script> 
+<script src="{{asset('assets/js/wow.min.js')}}"></script> 
+<script src="{{asset('assets/js/fontawesome.min.js')}}"></script> 
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script> 
+<script src="{{asset('assets/js/boca-deportes.js')}}"></script> 
+<script src="{{asset('assets/js/lity.js')}}"></script> 
 
 <!-- menu --> 
 <script> var plugin_path = '{{asset('assets/js/')}}'; </script> 
@@ -322,7 +322,7 @@ $("#homevideo")[0].play();
 });
 	
 </script>
-<script type="text/javascript')}}">
+<script type="text/javascript">
         $('ul.pagination').hide();
         $(function() {
             $('.infinite-scroll').jscroll({
