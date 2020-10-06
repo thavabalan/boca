@@ -17,15 +17,15 @@
 <meta name="keywords" />
 <meta name="description" />
 	<!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{asset('/images/favicons/apple-touch-icon.png')}}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{asset('/images/favicons/favicon-32x32.png')}}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/images/favicons/favicon-16x16.png')}}">
-  <meta name="msapplication-config" content="{{asset('/images/favicons/browserconfig.xml')}}">
-  <link rel="shortcut icon" href="{{asset('/images/favicons/favicon.ico')}}">
-  <link rel="manifest" href="{{asset('/images/favicons/manifest.json')}}">
-  <link rel="mask-icon" href="{{asset('/images/favicons/safari-pinned-tab.svg" color="#003391')}}">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#003391">
   <meta name="theme-color" content="#003391">
-
+  
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
