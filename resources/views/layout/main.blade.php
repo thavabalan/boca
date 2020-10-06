@@ -231,6 +231,8 @@ $(document).ready(function () {
     $('.menu-logo a').attr('href','#');
     window.scrollTo(0,0);
     $('html').css('overflow', 'hidden');
+    $(".fa-volume-up").hide();
+                    $(".fa-volume-off").hide();
   }
   else
   {
@@ -253,8 +255,6 @@ $(document).ready(function () {
 			params[p[0]] = p[1];
 		}
 	}
-$(".fa-volume-up").hide();
-                $(".fa-volume-off").hide();
 /*
 	if (ps == ",p") {
 		$("#homevideo").prop('muted', false);
