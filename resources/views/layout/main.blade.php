@@ -16,7 +16,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="keywords" />
 <meta name="description" />
-	
+	<!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{asset('/assets/images/favicons/apple-touch-icon.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{asset('/assets/images/favicons/favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/assets/images/favicons/favicon-16x16.png')}}">
+  <meta name="msapplication-config" content="{{asset('/assets/images/favicons/browserconfig.xml')}}">
+  <link rel="shortcut icon" href="{{asset('/assets/images/favicons/favicon.ico')}}">
+  <link rel="manifest" href="{{asset('/assets/images/favicons/manifest.json')}}">
+  <link rel="mask-icon" href="{{asset('/assets/images/favicons/safari-pinned-tab.svg" color="#003391')}}">
+  <meta name="theme-color" content="#003391">
+
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
