@@ -144,7 +144,7 @@ left:0;
                 <li class="menu-item-parent {{ Request::is('noticias') ? 'active' : '' }}"> <a href="{{ url('/noticias' )}}">Noticias</a> </li>
               <li class="menu-item-parent {{ Request::is('videos') ? 'active' : '' }}"> <a href="/videos">Videos</a> </li>
                 <!--<li class="menu-item-parent"> <a href="">Redes</a> </li>-->
-                <li class="menu-item-parent {{ Request::is('perfiles') ? 'active' : '' }}"> <a href="{{route('perfiles')}}">#Perfilesxeneixes</a> </li>
+                <li class="menu-item-parent {{ Request::is('perfiles') ? 'active' : '' }}"> <a href="{{route('perfiles')}}">#Perfilesxeneizes</a> </li>
                 <li class="menu-item-parent"> <a href="/#momentos1">Momentos</a> </li>
                 <li class="menu-item-parent redes"> <a class="twitter" target="_blank" href="https://twitter.com/deportesboca"><i class="fab fa-twitter"></i></a> </li>
               </ul>
